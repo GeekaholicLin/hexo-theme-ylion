@@ -50,8 +50,8 @@ window.onload = function () {
             };
             isPC = false;
         }
-        else document.documentElement.style.fontSize = '520%';
-    })(700 / 100);
+        else document.documentElement.style.fontSize = '610%';
+    })(450 / 100);
     //classList ployfill
     if (!("classList" in document.documentElement) && Object.defineProperty && typeof HTMLElement !== 'undefined') {
         Object.defineProperty(HTMLElement.prototype, 'classList', {
