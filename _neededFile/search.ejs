@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+    <% if(posts){ %>
+    <% posts.each(function(post){ %>
+    <entry>
+        <title><%-: post.title | cdata %></title>
+        <url><%- encodeURI(post.permalink).replace("&","&amp;") %></url>
+        <content type="html"><%-: post.content | cdata %></content>
+        <%if(post.categories&&post.categories.length){%>
+        <categories>
+            <% post.categories.each(function (cate) {%>
+            <category> <%= cate.name %> </category>
+            <%})%>
+        </categories>
+        <%}%>
+        <%if(post.tags&&post.tags.length){%>
+        <tags>
+            <% post.tags.each(function (tag) {%>
+            <tag> <%= tag.name %> </tag>
+            <%})%>
+        </tags>
+        <%}%>
+        <%if(post.next&&post.next){%>
+        <next><%- encodeURI(post.next.permalink).replace("&","&amp;") %></next>
+        <%}%>
+    </entry>
+    <% }) %>
+    <% } %>
+    <% if(pages){ %>
+    <% pages.each(function(page){ %>
+    <entry>
+        <title><%-: page.title | cdata %></title>
+        <url><%- encodeURI(page.permalink).replace("&","&amp;") %></url>
+        <content type="html"><%-: page.content | cdata %></content>
+
+    </entry>
+    <% }) %>
+    <% } %>
+</search>

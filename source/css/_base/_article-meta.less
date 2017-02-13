@@ -1,0 +1,30 @@
+@import "../_variable";
+@import "../_func";
+.article-meta {
+  position: relative;
+  border-top: 1px solid @lineColor;
+  padding-top: 0.17rem;
+   .fa-wrap {
+    color: @secondBlack;
+    margin-right: 0.1rem;
+  }
+  /*fix*/
+  .tags-meta,.categories-meta{
+    .inline-block();
+    vertical-align: bottom;
+    max-width: 21%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .read-article {
+    position: absolute;
+    right: 0;
+    top: 0.08rem;
+    padding: 0.08rem;
+    .border-radius(3px);
+    &:hover {
+      background-color: @btnBg;
+    }
+  }
+}

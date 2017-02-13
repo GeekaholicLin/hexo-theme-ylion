@@ -1,0 +1,44 @@
+<p id="process"></p>
+<div id="search-overlay">
+    <div class="search-area-wrap">
+        <div id="search-area">
+            <div class="input-wrap focus">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="search-input" autofocus autocomplete="off" type="text"
+                       placeholder="search this website..."/>
+            </div>
+            <ul id="search-result">
+                <li class="load-first"><i class="fa fa-spinner fa-spin"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<%if(is_post()){%>
+    <%- toc(page.content) %>
+<%}%>
+<%if(theme.high_song){%>
+    <%- js('js/highsong')%>
+<%}%>
+<%- js('js/search') %>
+<script type="text/javascript">
+    //theme config datas
+    var copyrightObj = {};
+    copyrightObj.enable = '<%= theme.appendCopyright.enable%>';
+    copyrightObj.triggerCopyLength = '<%= theme.appendCopyright.triggerCopyLength%>';
+    copyrightObj.appendText = '<%= theme.appendCopyright.appendText%>';
+    var leancloudObj = {};
+    leancloudObj.enable = '<%= theme.leancloud.enable%>';
+    leancloudObj.className = '<%= theme.leancloud.className%>';
+    leancloudObj.limits = '<%= theme.leancloud.limits%>';
+</script>
+<script type="text/javascript">
+    var search = {};
+    var search_path = "<%- config.search.path %>";
+    if (!search_path) {
+        search_path = "search.xml";
+    }
+    search.path = "<%- config.root %>" + search_path;
+    search.func =  _ajax.init();
+</script>
+<%- js('js/leancloud') %>
+<%- js('js/app') %>

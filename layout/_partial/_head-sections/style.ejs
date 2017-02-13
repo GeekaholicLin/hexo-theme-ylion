@@ -1,0 +1,16 @@
+<%
+    var base = '/css/base';
+    var needed = '';
+    if (is_home()) {
+        needed = '/css/pages/article-exp';
+    } else if (is_post()) {
+        needed = '/css/pages/post';
+    } else if (is_archive() || is_tag() || is_category()) {
+        needed = '/css/pages/archive';
+    } else {
+        needed = '/css/pages/othersPage'
+    }
+    var _fontAwe = theme.fontAwesome || '/css/thirdParty/font-awesome.min.css';
+    var _highlight = theme.highlightStyle || '/css/thirdParty/highlight/solarized-light';
+%>
+<%- css([base, needed, _fontAwe, _highlight]) %>

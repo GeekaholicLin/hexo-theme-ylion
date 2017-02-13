@@ -1,0 +1,14 @@
+<%- partial('_partial/head') %>
+<body>
+<%- partial('_partial/_head-sections/IE',null,{cache: !config.relative_link}) %>
+<div id="wrap">
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <div id="container">
+        <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+        <%- body %>
+    </div>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+</div>
+    <%- partial('_partial/after-footer') %>
+</body>
+</html>

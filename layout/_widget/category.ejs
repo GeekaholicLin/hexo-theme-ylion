@@ -1,0 +1,11 @@
+<% if(site.categories.length){ %>
+<li class="widget widget-normal category">
+    <h3 class="fa fa-th widget-title"><%= __('categories') %></h3>
+    <%- list_categories({
+        showcount: theme.cate_config.show_count,
+        transform: function(name){
+            return '<i class="fa" aria-hidden="true">'+name+'</i>';
+        }
+        }) %>
+</li>
+<% } %>

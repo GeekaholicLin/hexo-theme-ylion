@@ -1,0 +1,13 @@
+<% if(site.posts.length){%>
+<li class="widget widget-normal archive">
+  <h3 class="fa fa-archive widget-title"><%= __('archives') %></h3>
+    <%- list_archives({
+        show_count: theme.arch_config.show_count,
+        type: theme.arch_config.type,
+        order: theme.arch_config.order,
+        transform: function (name) {
+            return '<i class="fa" aria-hidden="true">'+name+'</i>';
+        }
+      }) %>
+</li>
+<%}%>

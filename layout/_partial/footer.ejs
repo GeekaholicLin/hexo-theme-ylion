@@ -1,0 +1,48 @@
+<footer>
+    <% if(theme.social && theme.social.length){ %>
+    <div class="social">
+        <% theme.social.forEach(function (item) { %>
+        <a href="<%- item.url %>" class="fa <%= item.icon %>" target="_blank" title="<%= item.title %>"></a>
+        <% }) %>
+    </div>
+    <% } %>
+    <div>
+        <%
+        var now = date(new Date(), 'YYYY');
+        var copyrightInfo = now + '';
+        var sinceYear = theme.since;
+        if (sinceYear && sinceYear !== now) copyrightInfo = sinceYear + ' - ' + now;
+        %>
+        <a href="<%- url_for() %>" class="copyright-links"><%= config.author %></a>&copy;<%= copyrightInfo %>.All Rights
+        Reserved.
+    </div>
+    <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
+                href="https://github.com/GeekaholicLin" class="copyright-links" target="_blank">GeekaholicLin</a>
+    </p>
+    <% if(theme.visits_count.enable){ %>
+    <%
+        var text = theme.visits_count.text.split('%d');
+    %>
+    <p>
+        <span id="busuanzi_container_site_<%= theme.visits_count.count_method%>" class="fa <%= theme.visits_count.icon%>">
+        <%= text[0]%><span id="busuanzi_value_site_<%= theme.visits_count.count_method%>"><i class="fa fa-spinner fa-spin"></i></span><%= text[1]%>
+        </span>
+    </p>
+    <% } %>
+</footer>
+<ul id="tools">
+    <li class="totop-btn fa fa-angle-up"></li>
+    <% if(is_post()){ %>
+    <li class="toc-btn fa fa-list-ul"></li>
+    <% } %>
+    <%
+    var enableDuoshuo = theme.duoshuo_shortname && theme.duoshuo_shortname.length > 0;
+    var enableDisqus = theme.disqus_shortname && theme.disqus_shortname.length > 0;
+    %>
+
+    <% if(page.comments && is_post() && (enableDuoshuo || enableDisqus)){ %>
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
+    <% } %>
+</ul>

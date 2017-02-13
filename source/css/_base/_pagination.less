@@ -1,0 +1,41 @@
+@import "../_func";
+@import "../_variable";
+#page-pagination{
+  text-align: center;
+}
+#page-nav{
+  .inline-block();
+  .clear-fix();
+  padding: .2rem 0;
+
+  .prev{
+    .border-radius(3px 0 0 3px);
+  }
+  .current{
+    background-color: @secondBlue;
+    color: @pageBg;
+    border-color: @secondBlue;
+  }
+  .next{
+    .border-radius(0 3px 3px 0);
+  }
+  .space{
+    color: @lineColor;
+  }
+  .disable{
+    color: @lineColor;
+  }
+  a,span{
+    float: left;
+    margin-left: -1px;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid @lineColor;
+    padding: 0.06rem 0.1rem;
+    line-height: 1.5;
+  }
+  a:hover{
+    background-color: @btnBg;
+  }
+
+}

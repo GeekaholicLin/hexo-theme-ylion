@@ -1,0 +1,31 @@
+@import "../_variable";
+@import "../_func";
+footer {
+  position: relative;
+  color: #9D9B9B;
+  font-size: 0.14rem;
+  border-top: 1px @lineColor solid;
+  box-sizing: border-box;
+  padding: 0.2rem 0 0.1rem;
+  bottom: 0;
+  text-align: left;
+  line-height: 1.8;
+  .social {
+    & > a {
+      color: @secondBlack;
+      font-size: 0.3rem;
+      margin-left: 0.2rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:hover {
+        color: @mainBlack;
+      }
+    }
+  }
+  #busuanzi_container_site_uv,#busuanzi_container_site_pv{
+    &:before{
+      margin-right: .08rem;
+    }
+  }
+}

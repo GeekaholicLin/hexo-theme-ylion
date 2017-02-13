@@ -1,0 +1,83 @@
+<div id="main">
+    <article id="post">
+        <div id="post-header">
+            <h1 id="<%= page.title %>"><%= page.title %></h1>
+            <%- partial('_partial/article-meta', {post: page}) %>
+            <%
+            var diffDays = moment(new Date()).diff(moment(page.date), 'day');
+            var warningTextArr = theme.warning.text.split("%d");
+            %>
+            <% if(diffDays > (theme.warning.days || 300)){ %>
+            <p class="fa fa-exclamation-triangle warning">
+                <%- warningTextArr[0]%><strong><%= diffDays %></strong><%- warningTextArr[1]%>
+            </p>
+            <% } %>
+        </div>
+        <div id="post-body">
+            <%- page.content %>
+        </div>
+        <div id="post-footer">
+            <div class="avatar" <% if(!theme.high_song && !theme.donate){ %>style="padding-bottom: 0.2rem"
+                    <% } %>>
+                <img src="<%- url_for(theme.author_img) %>" alt="avatar"/>
+                <% if(theme.high_song && theme.high_song.length && theme.high_song.length > 0){ %>
+                <a href="javascript:void(0)" class="high-song"><%- theme.high_song %></a>
+                <% } %>
+                <% if(theme.donate && theme.donate.text && theme.donate.img && theme.donate.img.length > 0){ %>
+                <a href="javascript:void(0)" class="donate fa"><%- theme.donate.text %></a>
+                <% } %>
+            </div>
+            <ul class="author-profile-section">
+                <li><%= __('author') %>:
+                    <%
+                    var profile_url =  url_for();
+                    if(theme.author_profile_page&&theme.author_profile_page.length>0){
+                        profile_url = theme.author_profile_page;
+                    }%>
+                    <a href="<%- profile_url%>"><%= config.author %></a>
+                </li>
+                <li><%= __('date') %>: <span><%- full_date(page.date, 'YYYY-MM-DD  hh:mm:ss') %></span></li>
+                <% if(page.updated){ %>
+                <li><%= __('update') %>: <span><%- full_date(page.updated, 'YYYY-MM-DD  hh:mm:ss') %></span></li>
+                <% } %>
+                <li class="post-category">
+                    <%= __('post_categories') %>:
+                    <% page.categories.forEach(function (cate) { %>
+                    <a href="<%- url_for(cate.path) %>"><%= cate.name %></a>
+                    <% }) %>
+                </li>
+                <li class="post-tags">
+                    <%= __('post_tags') %>:
+                    <% page.tags.forEach(function (tag) { %>
+                    <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+                    <% }) %>
+                </li>
+                <% if(theme.cc){ %>
+                <li> <%= __('post_licence') %>: <%- theme.cc %></li>
+                <% } %>
+            </ul>
+            <div id="donate-wrap">
+                <%var donateImgs = theme.donate.img%>
+                <%if(donateImgs.length&&donateImgs.length>0){%>
+                <%donateImgs.forEach(function (img) {%>
+                <img src="<%- img.url%>" alt="<%= img.alt%>" class="donate-img">
+                <%})%>
+                <%}%>
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        <% if(page.prev){ %>
+        <a href="<%- url_for(page.prev.path) %>" class="pre-post fa fa-caret-left"><%= page.prev.title %></a>
+        <% } %>
+        <% if(page.next){ %>
+        <a href="<%- url_for(page.next.path) %>" class="next-post fa"><%= page.next.title %></a>
+        <% } %>
+    </div>
+    <% if(page.comments){ %>
+    <div id="comments">
+        <%- partial('_partial/comments', {page: page}) %>
+    </div>
+    <% } %>
+</div>
+

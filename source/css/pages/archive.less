@@ -1,0 +1,54 @@
+@import "../_variable";
+@import "../_func";
+#post-list {
+  text-align: center;
+  .post-items {
+    position: relative;
+    .inline-block();
+    cursor: pointer;
+    margin: 0 .2rem .25rem 0;
+    .box-sizing(); /*fix*/
+    width: @postItemWidth;
+    height: @postItemHeight;
+    line-height: 1.5;
+    vertical-align: top;
+    .border-radius(5px);
+    border: 1px solid @lineColor;
+    .box-shadow(0 1px 1px @secondBlack);
+    &:hover {
+      .box-shadow(3px 3px 10px @secondBlack);
+      & > h2 {
+        color: @secondBlue !important;
+      }
+    }
+    .post-item-title {
+      color: @secondBlack;
+      padding: 0 20px; /*fix*/
+      .text-ellipsis();
+    }
+    .article-meta {
+      padding-top: 10px;
+      border: none;
+      a:hover {
+        color: @secondBlack;
+      }
+    }
+    .info {
+      margin-bottom: 15px;
+      font-weight: bold;
+      .text-shadow(0 1px 0 @mainBlack);
+      text-indent: 3px; /*fix*/
+      color: @secondBlack;
+      .textVerCenter(@postItemHeight/3 - 5px);
+      &:before {
+        .itemTriangle();
+      }
+    }
+  }
+}
+
+.post-items {
+  &:after {
+    .itemTriangle(@thirdBlue, -2);
+  }
+}

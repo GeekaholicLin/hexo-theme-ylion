@@ -1,0 +1,17 @@
+<% if (theme.links && theme.links.length){ %>
+<li class="widget widget-normal friends-link">
+    <h3 class="fa fa-globe widget-title"><%= __('friend_links') %></h3><br/>
+
+    <%
+        var name, url;
+        theme.links.forEach(function (item) {
+            for(var property in item){
+                name = property;
+                url = item[property];
+            }%>
+        <a href="<%- url %>" class="fa" target="_blank"><%= name%></a>
+
+    <%});%>
+
+</li>
+<% } %>

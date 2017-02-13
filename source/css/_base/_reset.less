@@ -1,0 +1,85 @@
+@import "../_variable";
+@import "../_func";
+/*base on Netease reset style*/
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: @pageBg;
+  padding: 0;
+  margin: 0;
+  font-size: @baseFontSize;
+  font-family: @font-family;
+}
+
+html, body, fieldset, img, iframe, abbr {
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+a, button {
+  cursor: pointer;
+  color: @secondBlue;
+}
+
+a[target="_blank"] {
+  cursor: alias;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+  font-weight: bold;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+body, textarea, input, button {
+  color: @mainBlack;
+}
+
+html, body {
+  width: 100%;
+  min-height: 9.3rem;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+/*edit*/
+*::selection {
+  background-color: @thirdBlue;
+}
+body {
+  overflow-x: hidden;
+}
+
+#wrap {
+  padding: 0 @pagePadding;
+}
+#main,#page-pagination{
+  float: right;
+  box-sizing: border-box;
+  width: 75%;
+}
+#container {
+  .clear-fix();
+  padding: @headerHeight + .3rem 0 @pagePadding/2 0;
+}
+#comments-count{
+  //display: none;
+}
+
+
+

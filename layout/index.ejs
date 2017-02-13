@@ -1,0 +1,44 @@
+<ul id="main">
+    <% if(page.posts && page.posts.length){ %>
+
+    <%var curPosts = page.posts;%>
+    <%if(theme.stick){%>
+    <% var sortedPosts = sortPosts(site.posts); %>
+    <% curPosts = getCurPosts(sortedPosts,config,page);%>
+    <% } %>
+    <% curPosts.forEach(function (post, i) { %>
+    <%
+        var urls = pickImgs(post);
+        var random = Math.floor(Math.random() * (urls.length));
+        if(theme.defaultImgs&&theme.defaultImgs.length>0){
+            var urls2 = theme.defaultImgs;
+            var random2 = Math.floor(Math.random() * (urls2.length));
+        }
+
+        //post.img or random img in post or default 5 pictures in img directory
+        var _photoUrl = post.img || (urls.length > 0 && urls[random]) || (urls2.length > 0 && urls2[random2]) ;
+    %>
+    <li  class="article-excerpt-wrap <%if(theme.stick&&post.top&&post.top>0){%><%- "stick"%><%}%>" _href = "<%- url_for(post.path)%>">
+        <div class="article-img img-ajax" data-src= <%- url_for(_photoUrl) %>>
+           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
+        </div>
+        <div class="article-excerpt">
+            <% if(post.title){ %>
+            <a class="article-title-link" href="<%- url_for(post.path) %>">
+                <h2 class="article-title"><%- post.title %></h2>
+            </a>
+            <% } %>
+            <p class="article-content">
+                <%- truncate(strip_html(post.content), {length: theme.excerptLength || 200, omission: '...'}) %>
+            </p>
+            <%- partial('_partial/article-meta', {post: post}) %>
+        </div>
+        <%if(theme.stick&&post.top&&post.top>0){%>
+        <i class="fa  fa-bookmark"></i>
+        <%}%>
+    </li>
+    <% }) %>
+    <%}%>
+
+</ul>
+<%- partial('_partial/pagination') %>

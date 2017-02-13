@@ -1,0 +1,16 @@
+<header <%if(is_post()){%> style="position: absolute;" <%}%>>
+    <div id="site-meta">
+        <a href="<%- url_for()%>" id="logo">
+            <h1 class="title"><%= config.title%></h1>
+        </a>
+        <% if (config.subtitle){ %>
+        <h2 class="subtitle"><%= config.subtitle%></h2>
+        <% } %>
+    </div>
+    <ul id="nav">
+        <% theme.menu.forEach(function (item) {%>
+            <li><a href="<%- item.url%>"><i class="fa <%= item.icon%>"></i><%= __(item.page+'') %></a></li>
+        <%})%>
+        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i><%= __('search') %></a></li>
+    </ul>
+</header>

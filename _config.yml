@@ -1,0 +1,151 @@
+
+# layout
+## menu
+menu:
+- page: home
+  url: /
+  icon: fa-home
+- page: archives
+  url: /archives
+  icon: fa-archive
+#- page: about
+#  url: /about
+#  icon: fa-user
+- page: rss
+  url: /atom.xml
+  icon: fa-rss
+## favicon
+favicon: /favicon.ico
+## rss
+rss: /atom.xml
+## widgets
+widgets:
+- notification
+- category
+- archive
+- popular
+- tagcloud
+- friends
+## widgets settings
+### notification config --support html/text
+notification:
+
+### categories-list config
+cate_config:
+ show_count: true
+### archives-list config
+arch_config:
+ type: 'monthly'
+ show_count: true
+ order: -1
+
+### tagcloud config
+tagcloud_config:
+ min_font: 0.14
+ max_font: 0.2
+ unit: rem
+ amount: 100
+ color: true
+ orderby: 'count'
+ start_color: '#6699cc'
+ end_color: '#0A407C'
+### friends' links settings
+links:
+- 主题作者: http://geekaholiclin.github.io
+# content
+## show top posts or not
+stick: true
+## social config
+social:
+- url: https://www.example1.com
+  title: freecodecamp
+  icon: fa-free-code-camp
+- url: https://www.example2.com
+  title: Follow me~
+  icon: fa-github
+
+
+## custom content config
+### append copyright when copy the text
+appendCopyright:
+  enable: true
+  triggerCopyLength: 200
+  appendText: '商业转载请联系作者获得授权,非商业转载请注明出处 © example'
+### uncategory posts meta text
+noCategoryText: 'null'
+### outdated browser warning
+outdated_browser_text: '您使用的浏览器版本过低，为了您更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。'
+### outdated post warning
+warning:
+  days: 300 #default is 300 days
+  text: '本文于%d天之前发表，文中内容可能已经过时。如有疑问，请在评论区留言。'
+
+### index article excerpt
+defaultImgs:
+  - http://XXXX.example.jpg
+  - /img/default-1.jpg
+
+excerptLength: 400
+### article meta
+whichCategory: 0
+### post footer
+high_song: 'high起来 &#128541;'
+author_img: http://example.com/author.jpg
+author_profile_page: /about.html # default is the blog home
+donate:
+  text: '赠我一杯 &#128536;'
+  img:
+  - url: http://example.com/alipay.jpg
+    alt: '支付宝付款'
+  - url: http://example.com/wechat.png
+    alt: '微信付款'
+# support html&text like notification's support in this theme,
+# but please don't use <li> tag
+cc: |-
+
+        <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+        知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+        </a>
+
+# third party service
+## busuanzi
+visits_count:
+  enable:  true
+  icon: fa-bar-chart
+  text: '欢迎第%d位小伙伴~'
+  count_method: 'uv'
+
+## leancloud
+leancloud:
+  enable: true
+  className: "BlogCounter"
+  app_id:
+  app_key:
+  limits: 10 # popular posts will be disable when 0
+## comments
+### disqus
+disqus_shortname:
+### duoshuo
+duoshuo_shortname:
+## analytics
+baidu_anaylytics:
+google_anaylytics:
+## sitemap
+google_vertification:
+baidu_vertification:
+# cdn or local files
+## style cdn
+
+fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+#highlightStyle: /css/thirdParty/highlight/github
+
+## script cdn
+
+highlightScript: //cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js
+leancloud_src: http://cdn1.lncld.net/static/js/2.1.0/av-min.js
+busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
+
+# theme and site self settings
+since: 2015
+robot: 'all' #default is all
+version: 0.0.0

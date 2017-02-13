@@ -1,0 +1,7 @@
+<% if(theme.duoshuo_shortname && theme.duoshuo_shortname.length > 0){ %>
+<%- partial('_thirdParty/duoshuo') %>
+<% } else{%>
+<% if(theme.disqus_shortname && theme.disqus_shortname.length > 0){ %>
+<%- partial('_thirdParty/disqus') %>
+<% } %>
+<%}%>

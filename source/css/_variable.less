@@ -1,0 +1,33 @@
+/*variable*/
+@mainBlack: #181818;
+@pageBg: #EEEEEE;
+@mainBlue: #396CA5;
+@secondBlue: #6699cc;
+@thirdBlue: #ABCDEF;
+@secondBlack: #666666;
+@lineColor: #cecece;
+@btnBg: #e0e0e0;
+@baseFontSize: .16rem;
+@headerHeight: .8rem;
+@titleFontSize: .18rem;
+@navFontSize: .12rem;
+@pagePadding: 0.3rem;
+@totopSize: 35px;
+@cardHeight: 2.27rem;
+@postItemWidth: 300px;
+@postItemHeight: 130px;
+@font-family: "Helvetica Neue", Helvetica, tahoma, Aria, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", simSun, Heiti, sans-serif;
+@code-font:  "Source Code Pro", Consolas, "Liberation Mono",Monaco, Menlo, monospace;
+.itemTriangle(@borderColor:#E0E0E0,@zIndex:-1) {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: @postItemHeight/3 solid;
+  border-right-width: @postItemWidth/2;
+  border-left-width: @postItemWidth/2;
+  border-color: @borderColor transparent transparent transparent;
+  top: 0;
+  left: 0;
+  z-index: @zIndex; /*fix*/
+}

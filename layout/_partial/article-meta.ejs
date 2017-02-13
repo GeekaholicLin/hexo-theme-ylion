@@ -1,0 +1,50 @@
+<div class="article-meta">
+    <% if(!is_category()){ %>
+    <%
+        var _showLevel = (theme.whichCategory ? Math.min(theme.whichCategory, post.categories.data.length) : post.categories.data.length) - 1,
+                _data = post.categories.data[_showLevel],
+                _categoryInfo = _data ? _data.name : (theme.noCategoryText || "None!");
+    %>
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span><%= _categoryInfo %></span>
+    </span>
+    <% } %>
+    <% if(!is_tag()){ %>
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            <% if(post.tags && post.tags.length > 0 && post.tags.data[0] && post.tags.data[0].name){ %>
+            <%= post.tags.data[0].name %>
+            <% }else{ %>
+            <%= "None!" %>
+            <% } %>
+        </span>
+    </span>
+    <% } %>
+    <%
+    var format = 'YYYY/MM/DD';
+    if (is_archive()) format = "MM/DD";
+    %>
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta "><%- date(post.date, format) %></span>
+    </span>
+    <% if(is_post()){ %>
+    <span  class=" fa-wrap">
+        <i class="fa fa-comment-o"></i>
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="<%= url_for(page.permalink) %>" data-thread-key="<%- url_for(page.path) %>"
+           data-count-type="comments"></span>
+    </span>
+    <% } %>
+    <% if(theme.leancloud && theme.leancloud.enable){ %>
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="<%= post.title %>"
+              data-leadcloud-url="<%- post.path %>"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    <% } %>
+    <% if(is_home()){ %>
+    <a href="<%- url_for(post.path) %>" class="read-article">阅读全文</a>
+    <% } %>
+</div>
