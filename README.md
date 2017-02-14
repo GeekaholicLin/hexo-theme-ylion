@@ -16,7 +16,7 @@
 - [x] 主题本身无图片
 - [x] (等待你去发现~)
 
-## Getting Start | 开始使用
+## Getting Started | 开始使用
 
 :warning:
 **如果你在此之前使用的是 `Hexo 2.x` 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录**
@@ -50,11 +50,11 @@
     └── ylion
 ```
 
-### Config | 配置
+### Configure | 配置
 
 接下来就是配置的问题了，分为主题配置和站点配置，主要是主题配置。
 
-#### Theme Config | 主题配置
+#### Theme Configure | 主题配置
 
 各个设置项均在以下的主题文件中以注释的形式进行说明：
 
@@ -261,7 +261,7 @@ version: 0.0.0 ### 主题版本
 
 
 
-#### Site Config | 站点配置
+#### Site Configure | 站点配置
 
 站点一般都保持默认，这里只讲主题相关的配置。
 
@@ -331,6 +331,6 @@ search:
 - [ ] Javascript模块化
 - [ ] 想到再说...:monkey:
 
-## Lincese
+## License
 
 [MIT](/LICENSE)
