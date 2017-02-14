@@ -121,6 +121,7 @@ leancloud:
   className: "BlogCounter"
   app_id:
   app_key:
+  region:
   limits: 10 # popular posts will be disable when 0
 ## comments
 ### disqus
