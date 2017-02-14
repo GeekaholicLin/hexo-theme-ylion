@@ -20,9 +20,6 @@
             <%})%>
         </tags>
         <%}%>
-        <%if(post.next&&post.next){%>
-        <next><%- encodeURI(post.next.permalink).replace("&","&amp;") %></next>
-        <%}%>
     </entry>
     <% }) %>
     <% } %>
@@ -32,7 +29,6 @@
         <title><%-: page.title | cdata %></title>
         <url><%- encodeURI(page.permalink).replace("&","&amp;") %></url>
         <content type="html"><%-: page.content | cdata %></content>
-
     </entry>
     <% }) %>
     <% } %>
