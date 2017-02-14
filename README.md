@@ -14,7 +14,8 @@
 - [x] leancloud阅读人数统计与最受欢迎文章widget
 - [x] 更强大的自定义
 - [x] 主题本身无图片
-- [x] (等待你去发现~)
+- [x] 响应式
+- [x] (我编不下去了，等待你去发现~)
 
 ## Getting Started | 开始使用
 
@@ -282,6 +283,8 @@ search:
 
 ```
 
+
+
 ### Run | 运行预览
 
 ``` bash
@@ -305,7 +308,23 @@ search:
 
 最后，Enjoy it!!!:kissing_heart:
 
-## More | 更多说明
+##  Information | 基本情况
+
+### Languages | 支持的语言
+
+支持英语，简体中文和繁体中文。能力有限，欢迎翻译其他语言。
+
+### Compatibility | 兼容性
+
+IE9+*、Chrome、Firefox、Safari
+
+**说明：** IE9 支持基本功能，无动画效果以及 [leancloud无法正常使用统计功能](https://github.com/leancloud/javascript-sdk/issues/9)
+
+### Contribute | 贡献代码
+
+接受各种形式的贡献，包括不限于提交问题与需求，修复代码。期待Fork和PR~
+
+### More | 更多说明
 
 1. 一般 `hexo init` 命令之后，都会正确地下载自身的依赖，如果在本地服务器预览不成功或者无法渲染等原因，可能是缺少站内搜索功能所需要的依赖，请尝试安装：
 
@@ -329,7 +348,24 @@ search:
 - [ ] 更多的优化
 - [ ] 文章分类目录可展开
 - [ ] Javascript模块化
+- [ ] 多说的样式以拓展功能
+- [ ] 数学公式支持
 - [ ] 想到再说...:monkey:
+
+## Thanks | 感谢
+
+作为一个设计天分上辈子都用光了的小前端，在设计这款主题的时候参考了好多主题和博客的设计和创意，
+才能在这么短的时间内成型一个博客主题，真的特别感谢！比心 :heart:
+
+**排名不分前后：**
+
+- [阿城的blog](https://qiutc.me/) / 借鉴了代码框
+- [小胡子哥的个人网站](http://www.barretlee.com/) / 借鉴文章过期提醒和作者信息
+- [hexo-theme-tranquilpeak](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak) / 借鉴文章简介的布局
+- [hexo-theme-next](https://github.com/iissnan/hexo-theme-next) / 从配置文件得知Hexo博客受欢迎的功能
+- [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) / 师傅带入门，初期代码参考
+- [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search) / 基于插件修改，解决站内搜索
+
 
 ## License
 
