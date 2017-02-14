@@ -3,7 +3,7 @@
 
 [在线预览 Preview](http://blog.geekaholic.cn)
 
-## Features|特点
+## Features | 特点
 
 - [x] jQuery Free，原生Javascript实现
 - [x] 强大的CSS3动画
@@ -14,18 +14,19 @@
 - [x] leancloud阅读人数统计与最受欢迎文章widget
 - [x] 更强大的自定义
 - [x] 主题本身无图片
+- [x] (等待你去发现~)
 
-## Getting Start/开始使用
+## Getting Start | 开始使用
 
 :warning:
 **如果你在此之前使用的是 `Hexo 2.x` 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录**
 
 
-### prerequisites/前提条件
+### Prerequisites | 前提条件
 
 `Node.js` 环境、`Git` 环境以及 `Hexo` ,如果你尚未安装或者不了解 `Hexo`，请参考 [官方教程](https://hexo.io/zh-cn/docs/index.html) 进行了解以及安装。
 
-### Dependencies/依赖安装
+### Dependencies | 依赖安装
 
 因为 **hexo-theme-ylion** 使用了 `ejs` 模版引擎 、 `Less` CSS预编译语言以及在官方插件的基础上
 进行功能的开发，依赖必不可少。
@@ -38,7 +39,7 @@
     npm install hexo-deployer-git --save
 ```
 
-### Download|下载主题文件
+### Download | 下载主题文件
 
 有两种方式下载主题--下载 `*.zip` 文件和通过 `git` ，无论哪种方式请确认下载的文件目录和博客站点的theme子目录中的landscape
 目录同一个级别，如下：
@@ -49,11 +50,11 @@
     └── ylion
 ```
 
-### Config|配置
+### Config | 配置
 
 接下来就是配置的问题了，分为主题配置和站点配置，主要是主题配置。
 
-#### Theme Config|主题配置
+#### Theme Config | 主题配置
 
 各个设置项均在以下的主题文件中以注释的形式进行说明：
 
@@ -260,7 +261,7 @@ version: 0.0.0 ### 主题版本
 
 
 
-#### Site Config|站点配置
+#### Site Config | 站点配置
 
 站点一般都保持默认，这里只讲主题相关的配置。
 
@@ -281,7 +282,7 @@ search:
 
 ```
 
-### Run|运行预览
+### Run | 运行预览
 
 ``` bash
     hexo clean && hexo g && hexo s -p 4300
@@ -304,7 +305,7 @@ search:
 
 最后，Enjoy it!!!:kissing_heart:
 
-## More|更多说明
+## More | 更多说明
 
 1. 一般 `hexo init` 命令之后，都会正确地下载自身的依赖，如果在本地服务器预览不成功或者无法渲染等原因，可能是缺少站内搜索功能所需要的依赖，请尝试安装：
 
@@ -322,7 +323,7 @@ search:
 
 4. 如果喜欢该款主题，还希望不吝啬你的star~:satisfied:
 
-## TODO|计划
+## TODO | 计划
 
 - [ ] 使用教程和开发Hexo主题教程
 - [ ] 更多的优化
@@ -332,4 +333,4 @@ search:
 
 ## Lincese
 
-[MIT](/blob/master/LICENSE)
+[MIT](/LICENSE)
