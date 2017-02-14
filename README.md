@@ -17,6 +17,17 @@
 - [x] 响应式
 - [x] （我编不下去了，等待你去发现~）
 
+## TODO | 计划
+
+- [ ] 使用教程和开发Hexo主题教程
+- [ ] 更多的优化
+- [ ] 文章分类目录可展开
+- [ ] Javascript模块化
+- [ ] 多说的样式以拓展功能
+- [ ] 数学公式支持
+- [ ] 想到再说...:monkey:
+
+
 ## Getting Started | 开始使用
 
 :warning:
@@ -38,6 +49,10 @@
     npm install hexo-generator-feed --save
     npm install hexo-generator-sitemap --save
     npm install hexo-deployer-git --save
+    ## 若无以下依赖，也要进行安装
+    npm install ejs --save
+    npm install moment --save
+    npm install utils-merge --save
 ```
 
 ### Download | 下载主题文件
@@ -260,8 +275,6 @@ version: 0.0.0 ### 主题版本
 
 
 
-
-
 #### Site Configure | 站点配置
 
 站点一般都保持默认，这里只讲主题相关的配置。
@@ -308,49 +321,24 @@ search:
 
 最后，Enjoy it!!!:kissing_heart:
 
-##  Information | 基本情况
 
-### Languages | 支持的语言
+## Languages | 支持的语言
 
 支持英语，简体中文和繁体中文。能力有限，欢迎翻译其他语言。
 
-### Compatibility | 兼容性
+## Compatibility | 兼容性
 
 IE9+*、Chrome、Firefox、Safari
 
 **说明：** IE9 支持基本功能，无动画效果以及 [leancloud无法正常使用统计功能](https://github.com/leancloud/javascript-sdk/issues/9)
 
-### Contribute | 贡献代码
+## Contribute | 贡献
+
+主题的测试基本通过，个人使用基本没有问题，但难免会有纰漏。如果大家在使用的过程发现bug或者有改进性的建议，欢迎提出~
 
 接受各种形式的贡献，包括不限于提交问题与需求，修复代码。期待Fork和PR~
 
-### More | 更多说明
-
-1. 一般 `hexo init` 命令之后，都会正确地下载自身的依赖，如果在本地服务器预览不成功或者无法渲染等原因，可能是缺少站内搜索功能所需要的依赖，请尝试安装：
-
-    ``` bash
-      npm install ejs --save
-      npm install moment --save
-      npm install utils-merge --save
-    ```
-
-    **如果仍然无法解决问题，欢迎提出issue~**
-
-2. 关于第三方服务功能的帐号申请问题，还请各位在网上查找教程，或者等待我的教程~~(嗯，又立了一个flag:gun:)
-
-3. 主题的测试基本通过，个人使用基本没有问题，但难免会有纰漏。如果大家在使用的过程发现bug或者有改进性的建议，欢迎提出~
-
-4. 如果喜欢该款主题，还希望不吝啬你的star~:satisfied:
-
-## TODO | 计划
-
-- [ ] 使用教程和开发Hexo主题教程
-- [ ] 更多的优化
-- [ ] 文章分类目录可展开
-- [ ] Javascript模块化
-- [ ] 多说的样式以拓展功能
-- [ ] 数学公式支持
-- [ ] 想到再说...:monkey:
+如果喜欢该款主题，还希望不吝啬你的star~:satisfied:
 
 ## Thanks | 感谢
 
