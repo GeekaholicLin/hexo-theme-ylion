@@ -364,7 +364,7 @@ window.onload = function () {
                             if (results.length > 0) {
                                 var counter = results[0];
                                 var times = counter.get("times");
-                                item.innerHTML = (parseInt(times) + 1).toString().trim();
+                                item.innerHTML = times.toString().trim();
                             }
                             else {
                                 item.innerHTML = 0;
