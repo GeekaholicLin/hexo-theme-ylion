@@ -30,19 +30,3 @@
     </p>
     <% } %>
 </footer>
-<ul id="tools">
-    <li class="totop-btn fa fa-angle-up"></li>
-    <% if(is_post()){ %>
-    <li class="toc-btn fa fa-list-ul"></li>
-    <% } %>
-    <%
-    var enableDuoshuo = theme.duoshuo_shortname && theme.duoshuo_shortname.length > 0;
-    var enableDisqus = theme.disqus_shortname && theme.disqus_shortname.length > 0;
-    %>
-
-    <% if(page.comments && is_home() && is_post() && (enableDuoshuo || enableDisqus)){ %>
-    <li class="comment-btn fa fa-comments-o">
-        <a href="#comments" title="comments"></a>
-    </li>
-    <% } %>
-</ul>

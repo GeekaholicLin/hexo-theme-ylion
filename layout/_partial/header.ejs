@@ -1,4 +1,4 @@
-<header <%if(is_post()){%> style="position: absolute;" <%}%>>
+<header <%if(!is_home()){%> style="position: absolute;" <%}%>>
     <div id="site-meta">
         <a href="<%- url_for()%>" id="logo">
             <h1 class="title"><%= config.title%></h1>

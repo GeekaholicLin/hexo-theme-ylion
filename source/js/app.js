@@ -169,8 +169,7 @@ window.onload = function () {
         } else $totop.style.display = 'none';
         //header
         //getComputedStyle() fix 'fixed' style bug
-        if (window.getComputedStyle($header).position !== "absolute" && window.getComputedStyle($header).position !== "relative") {
-
+        if (window.getComputedStyle($header).position === "fixed") {
             if (getScrollTop() > 0) {
                 $header.classList.add('fixed');
             } else {
