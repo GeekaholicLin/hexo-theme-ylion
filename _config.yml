@@ -28,7 +28,11 @@ widgets:
 - friends
 ## widgets settings
 ### notification config --support html/text
-notification:
+notification: |-
+
+            <p>Hexo主题ylion v0.0.1版本即将上线，敬请期待~！
+            主题作者：<a href="https://github.com/GeekaholicLin"
+            title="fork me" target="_blank">Geekaholic</a></p>
 
 ### categories-list config
 cate_config:
@@ -52,25 +56,35 @@ tagcloud_config:
 ### friends' links settings
 links:
 - 主题作者: http://geekaholiclin.github.io
+- walkerlala: http://walkerlala.github.com/
+- 璀璨星空: http://jerry011235.github.io/
 # content
 ## show top posts or not
 stick: true
 ## social config
 social:
-- url: https://www.example1.com
+- url: https://freecodecamp.cn/geekaholiclin
   title: freecodecamp
   icon: fa-free-code-camp
-- url: https://www.example2.com
-  title: Follow me~
+- url: https://github.com/GeekaholicLin
+  title: github
   icon: fa-github
-
+- url: https://leetcode.com/geekaholic/
+  title: leetcode
+  icon: fa-code
+- url: https://www.zhihu.com/people/geekaholic/activities
+  title: 知乎
+  icon: fa-graduation-cap
+- url: mailto:geekaholiclin@gmail.com
+  title: mail to me
+  icon: fa-envelope-o
 
 ## custom content config
 ### append copyright when copy the text
 appendCopyright:
   enable: true
   triggerCopyLength: 200
-  appendText: '商业转载请联系作者获得授权,非商业转载请注明出处 © example'
+  appendText: '商业转载请联系作者获得授权,非商业转载请注明出处 © GeekaholicLin'
 ### uncategory posts meta text
 noCategoryText: 'null'
 ### outdated browser warning
@@ -82,22 +96,25 @@ warning:
 
 ### index article excerpt
 defaultImgs:
-  - http://XXXX.example.jpg
-  - /img/default-1.jpg
+  - http://olb32qrq7.bkt.clouddn.com/blog-bg3.jpg
+  - http://olb32qrq7.bkt.clouddn.com/blog-bg4.png
+  - http://olb32qrq7.bkt.clouddn.com/blog-bg5.jpg
+  - http://olb32qrq7.bkt.clouddn.com/blog-bg6.jpg
+#  - /img/default-1.jpg
 
 excerptLength: 400
 ### article meta
 whichCategory: 0
 ### post footer
 high_song: 'high起来 &#128541;'
-author_img: http://example.com/author.jpg
+author_img: http://olb32qrq7.bkt.clouddn.com/author.jpg
 author_profile_page: /about.html # default is the blog home
 donate:
-  text: '赠我一杯 &#128536;'
+  text: '打赏资瓷 &#128536;'
   img:
-  - url: http://example.com/alipay.jpg
+  - url: http://olb32qrq7.bkt.clouddn.com/alipay.jpg
     alt: '支付宝付款'
-  - url: http://example.com/wechat.png
+  - url: http://olb32qrq7.bkt.clouddn.com/wechat.png
     alt: '微信付款'
 # support html&text like notification's support in this theme,
 # but please don't use <li> tag
@@ -119,34 +136,32 @@ visits_count:
 leancloud:
   enable: true
   className: "BlogCounter"
-  app_id:
-  app_key:
+  app_id: RI5uv752sD0nGTyUSUC6odJE-gzGzoHsz
+  app_key: yuke8QmutaxI5YvyD2NIE57u
   region:
   limits: 10 # popular posts will be disable when 0
 ## comments
 ### disqus
-disqus_shortname:
+#disqus_shortname: geekaholiclin
 ### duoshuo
-duoshuo_shortname:
+duoshuo_shortname: garcin
 ## analytics
-baidu_anaylytics:
-google_anaylytics:
+baidu_anaylytics: 1fdc784829bc9fa0c0bbee0c680ffe2a
+google_anaylytics: UA-91854900-3
 ## sitemap
-google_vertification:
-baidu_vertification:
+google_vertification: osGzKb_y9J6vt8d0mGYPDH81ljatwPdSVCFwxMCJSaE
+baidu_vertification: Yn6v4uAWVY
 # cdn or local files
 ## style cdn
 
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
-#highlightStyle: /css/thirdParty/highlight/github
 
 ## script cdn
 
-highlightScript: //cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js
 leancloud_src: http://cdn1.lncld.net/static/js/2.1.0/av-min.js
 busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
 
 # theme and site self settings
 since: 2015
 robot: 'all' #default is all
-version: 0.0.0
+version: v0.0.1
