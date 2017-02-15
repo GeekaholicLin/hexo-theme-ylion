@@ -1,7 +1,14 @@
 <div id="main">
     <article id="post">
         <div id="post-header">
-            <h1 id="<%= page.title %>"><%= page.title %></h1>
+
+            <h1 id="<%= page.title %>">
+                <%if(page.link){%>
+                <a href="<%- url_for(page.link) %>" target="_blank"><%= page.title %></a>
+                <%}else{%>
+                <%= page.title||'NO Title!' %>
+                <%}%>
+            </h1>
             <%- partial('_partial/article-meta', {post: page}) %>
             <%
             var diffDays = moment(new Date()).diff(moment(page.date), 'day');
@@ -13,6 +20,7 @@
             </p>
             <% } %>
         </div>
+        <%- partial('_partial/gallery',{post:page})%>
         <div id="post-body">
             <%- page.content %>
         </div>

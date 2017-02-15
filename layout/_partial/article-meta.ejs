@@ -3,7 +3,7 @@
     <%
         var _showLevel = (theme.whichCategory ? Math.min(theme.whichCategory, post.categories.data.length) : post.categories.data.length) - 1,
                 _data = post.categories.data[_showLevel],
-                _categoryInfo = _data ? _data.name : (theme.noCategoryText || "None!");
+                _categoryInfo = _data ? _data.name : (theme.noCategoryText || "null");
     %>
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
@@ -17,7 +17,7 @@
             <% if(post.tags && post.tags.length > 0 && post.tags.data[0] && post.tags.data[0].name){ %>
             <%= post.tags.data[0].name %>
             <% }else{ %>
-            <%= "None!" %>
+            <%= "null" %>
             <% } %>
         </span>
     </span>
@@ -45,6 +45,6 @@
     </span>
     <% } %>
     <% if(is_home()){ %>
-    <a href="<%- url_for(post.path) %>" class="read-article">阅读全文</a>
+    <a href="<%- url_for(post.path) %>" class="read-article"><%= __('read_more')%></a>
     <% } %>
 </div>

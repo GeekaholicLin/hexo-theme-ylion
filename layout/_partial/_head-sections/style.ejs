@@ -11,6 +11,6 @@
         needed = '/css/pages/othersPage'
     }
     var _fontAwe = theme.fontAwesome || '/css/thirdParty/font-awesome.min.css';
-    var _highlight = theme.highlightStyle || '/css/thirdParty/highlight/solarized-light';
+    var _highlight = '/css/thirdParty/highlight/'+theme.highlightStyle;
 %>
 <%- css([base, needed, _fontAwe, _highlight]) %>

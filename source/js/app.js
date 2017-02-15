@@ -23,6 +23,7 @@ window.onload = function () {
         $searchInput = document.getElementById('search-input'),
         $header = document.getElementsByTagName('header')[0],
         $post = document.getElementById('post'),
+        $postBody = document.getElementById('post-body'),
         $highSongBtn = document.querySelector('.high-song'),
         $donateBtn = document.querySelector('.donate'),
         $donateWrap = document.getElementById('donate-wrap'),
@@ -227,7 +228,7 @@ window.onload = function () {
         }
     }
 
-    $post && $post.addEventListener('click', function (e) {
+    $postBody && $postBody.addEventListener('click', function (e) {
         toHash(e);
     });
     // click fake links
@@ -391,7 +392,7 @@ window.onload = function () {
                     for (var i = 0, length = results.length; i < length; i++) {
                         (function (index) {
                             var item = results[index];
-                            title = item.get('title');
+                            title = item.get('title')||'No Title!';
                             url = item.get('url');
                             times = item.get('times');
                             $result += '<li class="popular-item popular-item-' + (index + 1) + '">';

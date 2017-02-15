@@ -1,84 +1,70 @@
-/*
-
-Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
-
-*/
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #fdf6e3;
-  color: #657b83;
-}
-
-.hljs-comment,
-.hljs-quote {
+.comment,
+.quote {
   color: #93a1a1;
 }
 
 /* Solarized Green */
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-addition {
+.keyword,
+.selector-tag,
+.addition {
   color: #859900;
 }
 
 /* Solarized Cyan */
-.hljs-number,
-.hljs-string,
-.hljs-meta .hljs-meta-string,
-.hljs-literal,
-.hljs-doctag,
-.hljs-regexp {
+.number,
+.string,
+.meta .meta-string,
+.literal,
+.doctag,
+.regexp {
   color: #2aa198;
 }
 
 /* Solarized Blue */
-.hljs-title,
-.hljs-section,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class {
+.title,
+.section,
+.name,
+.selector-id,
+.selector-class {
   color: #268bd2;
 }
 
 /* Solarized Yellow */
-.hljs-attribute,
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-class .hljs-title,
-.hljs-type {
+.attribute,
+.attr,
+.variable,
+.template-variable,
+.class .title,
+.type {
   color: #b58900;
 }
 
 /* Solarized Orange */
-.hljs-symbol,
-.hljs-bullet,
-.hljs-subst,
-.hljs-meta,
-.hljs-meta .hljs-keyword,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-link {
+.symbol,
+.bullet,
+.subst,
+.meta,
+.meta .keyword,
+.selector-attr,
+.selector-pseudo,
+.link {
   color: #cb4b16;
 }
 
 /* Solarized Red */
-.hljs-built_in,
-.hljs-deletion {
+.built_in,
+.deletion {
   color: #dc322f;
 }
 
-.hljs-formula {
+.formula {
   background: #eee8d5;
 }
 
-.hljs-emphasis {
+.emphasis {
   font-style: italic;
 }
 
-.hljs-strong {
+.strong {
   font-weight: bold;
 }

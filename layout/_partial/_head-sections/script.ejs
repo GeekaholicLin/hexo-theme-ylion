@@ -1,13 +1,9 @@
 <!--script-->
 <%
-var _highlightScript = theme.highlightScript || '/js/thirdParty/highlight.pack.js';
 var _leancloud = theme.leancloud_src || '/js/thirdParty/leancloud.min.js';
 var _busuanzi = theme.busuanzi_src || '/js/thirdParty/busuanzi.min.js';
 %>
-<%- js(_highlightScript) %>
-<script>
-    hljs.initHighlightingOnLoad();
-</script>
+
 <% if(theme.leancloud && theme.leancloud.enable && theme.leancloud.app_id && theme.leancloud.app_key){ %>
 <%- js(_leancloud) %>
 <script>

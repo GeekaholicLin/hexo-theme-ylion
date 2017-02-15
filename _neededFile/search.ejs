@@ -6,14 +6,14 @@
         <title><%-: post.title | cdata %></title>
         <url><%- encodeURI(post.permalink).replace("&","&amp;") %></url>
         <content type="html"><%-: post.content | cdata %></content>
-        <%if(post.categories&&post.categories.length){%>
+        <%if(post.categories&&post.categories.length>0){%>
         <categories>
             <% post.categories.each(function (cate) {%>
             <category> <%= cate.name %> </category>
             <%})%>
         </categories>
         <%}%>
-        <%if(post.tags&&post.tags.length){%>
+        <%if(post.tags&&post.tags.length>0){%>
         <tags>
             <% post.tags.each(function (tag) {%>
             <tag> <%= tag.name %> </tag>
