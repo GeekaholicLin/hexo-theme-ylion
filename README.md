@@ -1,6 +1,8 @@
 # hexo-theme-ylion
 :blush: 说不定是一个让你感到惊喜的hexo主题 :beers: :candy:
 
+![http://olb32qrq7.bkt.clouddn.com/hexo-theme-ylion.jpg](hexo-theme-ylion)
+
 [在线预览 Preview](http://blog.geekaholic.cn)
 
 ## Features | 特点
@@ -25,7 +27,7 @@
 - [ ] Javascript模块化
 - [ ] 多说的样式以拓展功能
 - [ ] 数学公式支持
-- [ ] 想到再说...:monkey:
+- [ ] 你们来决定...:monkey:
 
 
 ## Getting Started | 开始使用
@@ -49,7 +51,7 @@
     npm install hexo-generator-feed --save
     npm install hexo-generator-sitemap --save
     npm install hexo-deployer-git --save
-    ## 若无以下依赖，也要进行安装
+    ## 若node_module目录下无以下文件夹，也要进行安装
     npm install ejs --save
     npm install moment --save
     npm install utils-merge --save
@@ -168,8 +170,8 @@ appendCopyright:
   appendText: '商业转载请联系作者获得授权,非商业转载请注明出处 © example'
 
 ### uncategory posts meta text
-### 当无目录时的显示文字，默认为'None!'
-noCategoryText: 'None!'
+### 当无目录时的显示文字，默认为'null'
+noCategoryText: 'null'
 
 ### outdated browser warning
 ### 过低版本的浏览器提醒文字
@@ -215,6 +217,8 @@ cc: |-
         知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
         </a>
 
+### highlight {@highlightStyle:[github,solarized-light]}
+highlightStyle: github ### 内置主题
 # third party service --第三方服务
 ## busuanzi --不蒜子站点总人数统计 {@visits_count:{enable:是否开启,icon:图标,text:显示文字/*%d为占位符*/,method:统计方式}}
 visits_count:
@@ -251,12 +255,9 @@ baidu_vertification:
 ## style cdn --样式 cdn
 ## icon -- 官网地址：http://fontawesome.io/icons/
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
-## highlight -- 官网地址：https://highlightjs.org/
-highlightStyle: /css/thirdParty/highlight/github ### 内置的第二款代码主题
+
 
 ## script cdn --脚本cdn
-## highlight -- 官网地址：https://highlightjs.org/
-highlightScript: //cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js
 ## leancloud -- 官网:https://leancloud.cn/
 leancloud_src: http://cdn1.lncld.net/static/js/2.1.0/av-min.js
 ## busuanzi -- 官网：http://busuanzi.ibruce.info/
@@ -265,7 +266,7 @@ busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
 # theme and site self settings
 since: 2015 ## 网站建立时间
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
-version: 0.0.0 ### 主题版本
+version: 0.0.1 ### 主题版本
 
 
 ```
@@ -293,6 +294,12 @@ theme: ylion ### 主题文件在Theme目录下的命名
 search:
   path: search.xml
   field: all
+
+### 代码高亮
+highlight:
+  enable: true
+  line_number: true
+  tab_replace:
 
 ```
 
@@ -353,7 +360,7 @@ IE9+*、Chrome、Firefox、Safari
 - [hexo-theme-next](https://github.com/iissnan/hexo-theme-next) / 从配置文件得知Hexo博客受欢迎的功能
 - [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) / 师傅带入门，初期代码参考
 - [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search) / 基于插件修改，解决站内搜索
-
+- [Netcan_Space](http://www.netcan666.com/) / 参考置顶功能排序算法
 
 ## License
 

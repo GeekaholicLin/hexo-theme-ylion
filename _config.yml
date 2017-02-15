@@ -18,12 +18,12 @@ rss: /atom.xml
 
 ## widgets -- 6个左边小工具{@widgets:[notification,category,archive,popular,tagcloud,friends]}
 widgets:
-- notification ## 网站公告
-- category ## 文章分类
-- archive ## 文章归档
-- popular ## 热门文章
-- tagcloud ## 彩色标签云
-- friends ## 友链
+- notification
+- category
+- archive
+- popular
+- tagcloud
+- friends
 
 ## widgets settings --各个小工具的设置
 ### notification config --网站公告设置。支持 html 和 纯文本
@@ -90,8 +90,8 @@ appendCopyright:
   appendText: '商业转载请联系作者获得授权,非商业转载请注明出处 © example'
 
 ### uncategory posts meta text
-### 当无目录时的显示文字，默认为'None!'
-noCategoryText: 'None!'
+### 当无目录时的显示文字，默认为'null'
+noCategoryText: 'null'
 
 ### outdated browser warning
 ### 过低版本的浏览器提醒文字
@@ -109,7 +109,7 @@ warning:
 defaultImgs:
   - http://XXXX.example.jpg
   - /img/default-1.jpg
-excerptLength: 400 ### 简介文字显示最大字数
+excerptLength: 400
 
 ### article meta
 ### 文章信息(article meta)指首页和文章内页，与icon一起的信息
@@ -119,8 +119,8 @@ whichCategory: 0
 ### post footer
 ### 作者信息部分设置
 high_song: 'high起来 &#128541;'  ### 歌曲显示文字，若不需要该功能，则留空或移除
-author_img: http://example.com/author.jpg ### 作者头像地址
-author_profile_page: /about.html  ### 点击作者的名字跳转的地址，默认为博客首页
+author_img: http://example.com/author.jpg
+author_profile_page: /about.html
 donate:
   text: '赠我一杯 &#128536;' ### 打赏功能显示文字，若不需要，则留空或移除
   img: ### 打赏图片地址
@@ -137,7 +137,8 @@ cc: |-
         知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
         </a>
 ### highlight
-highlightStyle: github ### 内置的第二款代码主题
+### 内置两款代码主题
+highlightStyle: github
 # third party service --第三方服务
 ## busuanzi --不蒜子站点总人数统计 {@visits_count:{enable:是否开启,icon:图标,text:显示文字/*%d为占位符*/,method:统计方式}}
 visits_count:
@@ -154,7 +155,7 @@ leancloud:
   app_id:
   app_key:
   region:
-  limits: 10 ### 若要关闭该功能，设置为0或者在配置文件上移除popular对应的widget
+  limits: 10
 
 ## comments -- 评论框
 ### disqus
@@ -177,14 +178,12 @@ fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 
 ## script cdn --脚本cdn
-## highlight -- 官网地址：https://highlightjs.org/
-highlightScript: //cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js
 ## leancloud -- 官网:https://leancloud.cn/
 leancloud_src: http://cdn1.lncld.net/static/js/2.1.0/av-min.js
 ## busuanzi -- 官网：http://busuanzi.ibruce.info/
 busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
 
 # theme and site self settings
-since: 2015 ## 网站建立时间
+since: 2015
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
-version: 0.0.0 ### 主题版本
+version: 0.0.1
