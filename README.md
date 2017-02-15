@@ -1,9 +1,12 @@
 # hexo-theme-ylion
 :blush: 说不定是一个让你感到惊喜的hexo主题 :beers: :candy:
 
-![http://olb32qrq7.bkt.clouddn.com/hexo-theme-ylion.jpg](hexo-theme-ylion)
-
 [在线预览 Preview](http://blog.geekaholic.cn)
+
+![hexo-theme-ylion](http://olb32qrq7.bkt.clouddn.com/hexo-theme-ylion.jpg)
+
+
+
 
 ## Features | 特点
 
