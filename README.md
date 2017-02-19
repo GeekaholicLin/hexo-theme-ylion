@@ -257,7 +257,7 @@ baidu_vertification:
 
 ## mathjax -- mathjax支持
 mathjax:
-  enable: true  ### 是否开启，若开启，请再在Front-matter中加入`mathjax:enable`
+  enable: true  ### 是否开启，若开启，请再在Front-matter中加入`mathjax:true`
   src: //cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML ### cdn
 
 # cdn or local files --开启对应文件的cdn，默认使用本地文件。国内用户建议开启而不是使用github上的文件
