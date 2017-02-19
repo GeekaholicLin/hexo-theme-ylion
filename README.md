@@ -30,7 +30,7 @@
 - [ ] 文章分类目录可展开
 - [ ] Javascript模块化
 - [ ] 多说的样式以拓展功能
-- [ ] 数学公式支持
+- [x] 数学公式支持 / updated: 2017/2/19，[说明&注意事项](http://blog.geekaholic.cn/2017/02/19/mathjax/)
 - [ ] 你们来决定...:monkey:
 
 
@@ -254,6 +254,11 @@ google_anaylytics:
 ## sitemap -- 站点验证
 google_vertification:
 baidu_vertification:
+
+## mathjax -- mathjax支持
+mathjax:
+  enable: true  ### 是否开启，若开启，请再在Front-matter中加入`mathjax:enable`
+  src: //cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML ### cdn
 
 # cdn or local files --开启对应文件的cdn，默认使用本地文件。国内用户建议开启而不是使用github上的文件
 ## style cdn --样式 cdn

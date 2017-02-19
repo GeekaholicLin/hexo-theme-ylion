@@ -170,7 +170,10 @@ google_anaylytics:
 ## sitemap -- 站点验证
 google_vertification:
 baidu_vertification:
-
+## mathjax
+mathjax:
+  enable: true
+  src: //cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 # cdn or local files --开启对应文件的cdn，默认使用本地文件。国内用户建议开启而不是使用github上的文件
 ## style cdn --样式 cdn
 ## icon -- 官网地址：http://fontawesome.io/icons/
