@@ -27,7 +27,7 @@
 
 - [ ] 使用教程和开发Hexo主题教程
 - [ ] 更多的优化
-- [ ] 文章分类目录可展开
+~~文章分类目录可展开~~
 - [ ] Javascript模块化
 - [ ] 多说的样式以拓展功能
 - [x] 数学公式支持 / updated: 2017/2/19，[说明&注意事项](http://blog.geekaholic.cn/2017/02/19/mathjax/)
@@ -117,9 +117,11 @@ notification: |-
             主题作者：<a href="https://github.com/GeekaholicLin"
             title="fork me" target="_blank">Geekaholic</a></p>
 
-### categories-list config --文章分类设置{@cate_config:{@show_count:是否显示数字}}
+### categories-list config --文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
 cate_config:
  show_count: true
+ show_current: true
+
 
 ### archives-list config
 ### 文章归档设置{@arch_config:/*参数参考：https://hexo.io/zh-cn/docs/helpers.html#list-archives*/}
