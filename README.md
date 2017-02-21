@@ -3,7 +3,7 @@
 
 [在线预览 Preview](http://blog.geekaholic.cn)
 
-![hexo-theme-ylion](http://olb32qrq7.bkt.clouddn.com/hexo-theme-ylion.jpg)
+![hexo-theme-ylion](http://olpvawdcl.bkt.clouddn.com/hexo-theme-ylion.jpg)
 
 
 
