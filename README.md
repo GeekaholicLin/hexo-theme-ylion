@@ -1,7 +1,7 @@
 # hexo-theme-ylion
 :blush: 说不定是一个让你感到惊喜的hexo主题 :beers: :candy:
 
-[在线预览 Preview](http://blog.geekaholic.cn)
+[在线预览v0.0.2 Preview](http://blog.geekaholic.cn)
 
 ![hexo-theme-ylion](http://olpvawdcl.bkt.clouddn.com/hexo-theme-ylion.jpg)
 
@@ -277,7 +277,7 @@ busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
 # theme and site self settings
 since: 2015 ## 网站建立时间
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
-version: 0.0.1 ### 主题版本
+version: 0.0.2 ### 主题版本
 
 
 ```
