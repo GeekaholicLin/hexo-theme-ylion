@@ -25,9 +25,9 @@
 
 ## TODO | 计划
 
-- [ ] 使用教程和开发Hexo主题教程
+- [x] [使用教程和开发Hexo主题教程](http://blog.geekaholic.cn/2017/02/22/%E5%88%B6%E4%BD%9CHexo%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%881%EF%BC%89)
 - [ ] 更多的优化
-~~文章分类目录可展开~~
+- [ ] ~~文章分类目录可展开~~
 - [ ] Javascript模块化
 - [ ] 多说的样式以拓展功能
 - [x] 数学公式支持 / updated: 2017/2/19，[说明&注意事项](http://blog.geekaholic.cn/2017/02/19/mathjax/)
