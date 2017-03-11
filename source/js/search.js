@@ -41,10 +41,12 @@ var _ajax = {
                     var index_content = -1;
                     var first_occur = -1;
                     // only match artiles with not empty titles and contents
-                    if (data_title != '' && data_content != '' && data_categories != '' && data_tags != '') {
+                    if (data_title != '' && data_content != '') {
                         keywords.forEach(function (keyword, i) {
                             index_title = data_title.indexOf(keyword);
-                            data_content = "Categories: " + data_categories + "Tags: " + data_tags + data_categories;
+                            var tempCates = data_categories?("Categories: "+data_categories):"";
+                            var tempTags = data_tags?("Tags: "+data_tags):"";
+                            data_content = tempCates + tempTags + data_content;
                             index_content = data_content.indexOf(keyword);
                             if (index_title < 0 && index_content < 0) {
                                 isMatch = false;
