@@ -1,0 +1,42 @@
+<% if(page.type && page.type === 'demo'){ %>
+<div id="main">
+    <% var demos = site.data.demo; %>
+    <% if(demos && demos.length > 0){ %>
+    <div id="demo">
+        <% demos.forEach(function (demo) { %>
+        <div class="demo-wrap">
+            <% for(var key in demo){ %>
+            <h2 class="demo-title"><i class="fa fa-desktop"></i>
+                <%= key %>
+                <%if(key==='Netease'){%>
+                <span class="warning">此作品集为挑选部分，仅作为学习和展示使用，请勿用于商业用途。本人只负责<strong>PC端</strong>页面实现，插件、初始代码、设计稿、顶部、尾部以及分享按钮均来自网易，特此声明！</span>
+                <%}%>
+            </h2>
+            <ul class="demo-list">
+                <% demo[key].forEach(function (obj,index) { %>
+                <li class="demo-list-item">
+                    <a href="<%- url_for(obj.url)%>">
+                        <div class="demo-item-bg img-ajax" data-src="<%- url_for(obj.img)%>">
+                            <i class="fa fa-pulse fa-spinner"></i>
+                        </div>
+                        <h3 class="demo-item-title"><%= obj.name%></h3>
+                        <p class="demo-item-desc"><%= obj.description%></p>
+                    </a>
+                </li>
+                <% }) %>
+            </ul>
+            <% } %>
+        </div>
+        <% }) %>
+    </div>
+    <% } %>
+</div>
+<% } %>
+
+<%if(page.type && page.type==='about'){%>
+    <div id="main">
+        <div id="about">
+            <%- page.content%>
+        </div>
+    </div>
+<%}%>

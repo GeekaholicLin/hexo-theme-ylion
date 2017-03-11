@@ -24,6 +24,7 @@ window.onload = function () {
         $header = document.getElementsByTagName('header')[0],
         $post = document.getElementById('post'),
         $postBody = document.getElementById('post-body'),
+        $aboutBody = document.getElementById('about'),
         $highSongBtn = document.querySelector('.high-song'),
         $donateBtn = document.querySelector('.donate'),
         $donateWrap = document.getElementById('donate-wrap'),
@@ -147,6 +148,7 @@ window.onload = function () {
                     if(scrollBottom >= $this_offsetZero&&$this.getAttribute('data-src')&&$this.getAttribute('data-src').length>0){
                         if($this.nodeName.toLowerCase()==='img'){
                             $this.src = $this.getAttribute('data-src');
+                            $this.style.display = 'block';
                         }else {
                             var imgObj = new Image();
                             imgObj.onload = function () {
@@ -228,6 +230,9 @@ window.onload = function () {
     }
 
     $postBody && $postBody.addEventListener('click', function (e) {
+        toHash(e);
+    });
+    $aboutBody && $aboutBody.addEventListener('click', function (e) {
         toHash(e);
     });
     // click fake links
