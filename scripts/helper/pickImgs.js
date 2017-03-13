@@ -1,6 +1,6 @@
 function pickImgs(post) {
     var content = post.content.toString();
-    var imgRe = new RegExp(/<img.*?\ssrc=[\'\"]\S+[\'\"]\s.*?>/,'gim');
+    var imgRe = /<img.*?\ssrc=[\'\"]\S+[\'\"]\s.*?>/gim;
     var urlRe = /(http:|https:|\/|\.)\S+(?="\s)/i;
     var imgUrlsArr = content.match(imgRe);
     var data = [];
