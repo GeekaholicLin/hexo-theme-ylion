@@ -1,7 +1,7 @@
 # hexo-theme-ylion
 :blush: 说不定是一个让你感到惊喜的hexo主题 :beers: :candy:
 
-[在线预览v0.0.2 Preview](http://blog.geekaholic.cn)
+[在线预览 Preview](http://blog.geekaholic.cn)
 
 ![hexo-theme-ylion](http://olpvawdcl.bkt.clouddn.com/hexo-theme-ylion.jpg)
 
@@ -25,11 +25,11 @@
 
 ## TODO | 计划
 
-- [x] [使用教程和开发Hexo主题教程](http://blog.geekaholic.cn/2017/02/22/%E5%88%B6%E4%BD%9CHexo%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%881%EF%BC%89)
+- [x] [使用教程和开发Hexo主题教程](http://blog.geekaholic.cn/tags/Hexo%E4%B8%BB%E9%A2%98/)
 - [ ] 更多的优化
 - [ ] ~~文章分类目录可展开~~
 - [ ] Javascript模块化
-- [ ] 多说的样式以拓展功能
+- [ ] ~~多说的样式以拓展功能~~ (为多说默哀ing，已替换为[gitment](https://github.com/imsun/gitment))
 - [x] 数学公式支持 / updated: 2017/2/19，[说明&注意事项](http://blog.geekaholic.cn/2017/02/19/mathjax/)
 - [ ] 你们来决定...:monkey:
 
@@ -248,6 +248,16 @@ leancloud:
 disqus_shortname:
 ### duoshuo
 duoshuo_shortname:
+### gitment
+gitment:
+  enable: true
+  owner: GeekaholicLin
+  repo: geekaholiclin.github.io
+  client_id: aa2215dfc8ee944d1205
+  client_secret: 77cd2afa5d161bc0ab04639ed81300d808c6e22b
+  labels: "blog,gitment"
+  perPage: 20
+  maxCommentHeight:
 
 ## analytics --统计功能
 baidu_anaylytics:
@@ -372,6 +382,23 @@ IE9+*、Chrome、Firefox、Safari
 - [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) / 师傅带入门，初期代码参考
 - [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search) / 基于插件修改，解决站内搜索
 - [Netcan_Space](http://www.netcan666.com/) / 参考置顶功能排序算法
+
+## Changes log | 重要更新
+
+### V0.3.0
+
+- 移除多说的支持，替换为gitment，目前**尚未解决兼容性**，可以自行切换为Disqus
+- 移除大部分的圆角样式
+- 版本号更换 =。=
+
+### V0.2.0
+
+- 添加个人作品和About页面的支持
+
+
+### V0.1.0
+
+- 提交至官方theme仓库，ylion主题正式上线
 
 ## License
 
