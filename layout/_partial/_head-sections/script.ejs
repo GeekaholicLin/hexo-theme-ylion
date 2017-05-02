@@ -3,20 +3,37 @@
 var _leancloud = theme.leancloud_src || '/js/thirdParty/leancloud.min.js';
 var _busuanzi = theme.busuanzi_src || '/js/thirdParty/busuanzi.min.js';
 %>
-
 <% if(theme.leancloud && theme.leancloud.enable && theme.leancloud.app_id && theme.leancloud.app_key){ %>
 <%- js(_leancloud) %>
 <script>
-    var appId = "<%- theme.leancloud.app_id %>";
-    var appKey = "<%- theme.leancloud.app_key %>";
-    var region = '<%= theme.leancloud.region %>';
-    AV.init({
-        appId: appId,
-        appKey: appKey,
-        region: region
-    });
+  var appId = "<%- theme.leancloud.app_id %>";
+  var appKey = "<%- theme.leancloud.app_key %>";
+  var region = "<%= theme.leancloud.region %>";
+  AV.init({
+    appId: appId,
+    appKey: appKey,
+    region: region
+  });
 </script>
 <% } %>
 <% if(theme.visits_count.enable){ %>
 <script async src="<%- url_for(_busuanzi) %>"></script>
 <% } %>
+<%if(theme.gitment.enable&&is_post()){%>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var labels = "<%= theme.gitment.labels%>";
+  labels = labels.split(",");
+  var gitment = new Gitment({
+    id: window.location.pathname,
+    owner: "<%= theme.gitment.owner%>",
+    repo: "<%= theme.gitment.repo%>",
+    oauth: {
+      client_id: "<%= theme.gitment.client_id%>",
+      client_secret: "<%= theme.gitment.client_secret%>"
+    },
+    perPage: "<%= theme.gitment.perPage%>",
+    labels: labels
+  });
+</script>
+<%}%>

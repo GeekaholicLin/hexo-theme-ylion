@@ -14,14 +14,14 @@
       border: none;
       padding-top: 0;
     }
-    h1{
+    h1 {
       margin-top: 0;
     }
     .warning {
       position: relative;
       color: #BA5C5A;
       background-color: #F2DEDE;
-      .border-radius();
+      .border-radius(1px);
       padding: 0.1rem 0 0.05rem 0.1rem;
       margin: 0.2rem 0 0 0;
       font-size: 0.14rem;
@@ -37,7 +37,7 @@
       }
     }
   }
-  #post-gallery{
+  #post-gallery {
     img {
       display: block;
       .border-radius(5px);
@@ -51,13 +51,13 @@
     .video-container {
       text-align: center;
       height: 380px;
-        iframe {
-          margin: 0 auto;
-          width: 70%;
-          height: 100%;
+      iframe {
+        margin: 0 auto;
+        width: 70%;
+        height: 100%;
       }
     }
-    p{
+    p {
       line-height: 1.9;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -78,10 +78,10 @@
       margin: 0.15rem 0;
       border-left: 5px solid @lineColor;
       padding: 0.05rem 0.15rem 0.05rem 0.3rem;
-      background-color: #eaeaea;
+      background-color: #EAEAEA;
       color: @secondBlack;
-      cite{
-        &:before{
+      cite {
+        &:before {
           content: "---";
           padding: .1rem;
         }
@@ -90,20 +90,20 @@
     strong {
       color: @secondBlack;
     }
-    figure{
+    figure {
       font-family: @code-font;
       margin: 0.3rem 0;
       border: 1px solid @lineColor;
       border-top: none;
       .box-sizing();
       position: relative;
-      .border-radius(5px);
+      //.border-radius(5px);
       font-size: 0.14rem;
       &:before {
         content: "";
         display: block;
         height: 0.4rem;
-        .border-radius(5px 5px 0 0);
+        //.border-radius(5px 5px 0 0);
         background-color: #E3E3E3;
         border-top: 1px solid @lineColor;
       }
@@ -111,13 +111,13 @@
         content: " ";
         position: absolute;
         .border-radius(50%);
-        background: #fc625d;
+        background: #FC625D;
         width: 0.12rem;
         height: 0.12rem;
         top: 0.15rem;
         left: 0.17rem;
-        -webkit-box-shadow: 0.2rem 0 #fdbc40, 0.4rem 0 #35cd4b;
-        box-shadow: 0.2rem 0 #fdbc40, 0.4rem 0 #35cd4b;
+        -webkit-box-shadow: 0.2rem 0 #FDBC40, 0.4rem 0 #35CD4B;
+        box-shadow: 0.2rem 0 #FDBC40, 0.4rem 0 #35CD4B;
       }
       figcaption {
         position: absolute;
@@ -127,7 +127,7 @@
         height: 0.4rem;
         line-height: 0.4rem;
         text-align: center;
-        a{
+        a {
           position: absolute;
           right: .17rem;
         }
@@ -138,14 +138,14 @@
         border-right: 1px solid @btnBg;
       }
       .code {
-        padding-left: .1rem;
-        .line{
+        padding: .1rem;
+        .line {
           word-break: break-all;
           white-space: pre-wrap;
         }
       }
-      .line{
-        font-family:@code-font;
+      .line {
+        font-family: @code-font;
       }
     }
 
@@ -167,20 +167,20 @@
       padding: 0 0.05rem;
       color: @secondBlue !important;
     }
-    sup,sub{
+    sup, sub {
       margin-right: .1rem;
     }
-    ul,ol{
+    ul, ol {
       padding-left: 0.4rem;
       margin: .1rem 0 .3rem 0;
-      li{
+      li {
         line-height: 1.9;
       }
     }
-    ul li{
+    ul li {
       list-style-type: disc;
     }
-    ol li{
+    ol li {
       list-style-type: decimal;
     }
 
@@ -189,40 +189,39 @@
       border: 1px dashed @lineColor;
       margin: 0.3rem 0;
     }
-    li > code , p > code {
+    li > code, p > code {
       font-family: @code-font;
       padding: 0.01rem 0.05rem;
       margin: 0 0.05rem;
-      background-color: #EbEbEb;
+      background-color: #EBEBEB;
       border: 1px solid @lineColor;
       .border-radius(2px);
     }
 
-
-    & > table{
+    & > table {
       border-collapse: collapse;
       margin: .15rem auto;
       border: 1px solid @lineColor;
       max-width: 90%;
-      thead{
+      thead {
         background-color: #E3E3E3;
         font-weight: bold;
         padding: 0.1rem 0;
       }
-      th,td{
+      th, td {
         padding: 0 0.2rem;
         border: 1px solid @lineColor;
         line-height: 1.5;
         height: 0.4rem;
       }
     }
-    dt{
+    dt {
       font-weight: bold;
     }
-    dd{
+    dd {
       padding-left: 0.3rem;
     }
-    acronym,abbr{
+    acronym, abbr {
       color: @secondBlue;
     }
   }
@@ -230,7 +229,7 @@
     border-top: 6px solid @lineColor;
     position: relative;
     background-color: @btnBg;
-    .border-radius(0 0 10px 10px);
+    //.border-radius(0 0 10px 10px);
     padding: 0.2rem;
     margin-bottom: 0.5rem;
     overflow: hidden;
@@ -277,35 +276,36 @@
         }
       }
     }
-    #donate-wrap{
+    #donate-wrap {
       cursor: pointer;
       position: absolute;
       height: 1px;
       background-color: @lineColor;
       .box-sizing();
       width: 100%;
-      top:-1px;
-      left:0;
+      top: -1px;
+      left: 0;
       text-align: center;
       overflow: hidden;
-      .donate-img{
+      .donate-img {
         max-height: 100%;
         height: 90%;
         display: inline-block;
         .border-radius(5px);
         border: 3px solid @btnBg;
-        &:first-child{
+        &:first-child {
           margin-left: 0;
         }
       }
     }
-    #donate-wrap.show{
+    #donate-wrap.show {
       height: 100%;
-      .border-radius(0 0 10px 10px);
+      //.border-radius(0 0 10px 10px);
       padding: 0.2rem;
     }
   }
 }
+
 .article-nav {
   .clear-fix();
   .pre-post {
@@ -329,4 +329,5 @@
     }
   }
 }
+
 

@@ -8,7 +8,7 @@
     var enableDisqus = theme.disqus_shortname && theme.disqus_shortname.length > 0;
     %>
 
-    <% if(page.comments && !is_home() && is_post() && (enableDuoshuo || enableDisqus)){ %>
+    <% if(page.comments && !is_home() && is_post() && (enableDuoshuo || enableDisqus|| theme.gitment.enable)){ %>
     <li class="comment-btn fa fa-comments-o">
         <a href="#comments" title="comments"></a>
     </li>

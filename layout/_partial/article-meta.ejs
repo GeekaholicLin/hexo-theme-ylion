@@ -30,7 +30,7 @@
         <i class="fa fa-clock-o"></i>
         <span class="date-meta "><%- date(post.date, format) %></span>
     </span>
-    <% if(is_post()){ %>
+    <% if(false && is_post()){ %>
     <span  class=" fa-wrap">
         <i class="fa fa-comment-o"></i>
         <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="<%= url_for(page.permalink) %>" data-thread-key="<%- url_for(page.path) %>"

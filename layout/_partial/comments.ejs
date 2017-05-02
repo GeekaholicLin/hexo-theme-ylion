@@ -1,7 +1,11 @@
 <% if(theme.duoshuo_shortname && theme.duoshuo_shortname.length > 0){ %>
 <%- partial('_thirdParty/duoshuo') %>
-<% } else{%>
+<% } else{ %>
 <% if(theme.disqus_shortname && theme.disqus_shortname.length > 0){ %>
 <%- partial('_thirdParty/disqus') %>
+<% } else{ %>
+<script>
+  gitment.render(document.getElementById("comments"));
+</script>
 <% } %>
-<%}%>
+<% } %>

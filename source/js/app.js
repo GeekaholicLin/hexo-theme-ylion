@@ -30,8 +30,8 @@ window.onload = function () {
         $donateWrap = document.getElementById('donate-wrap'),
         $commentsCounter = document.getElementById('comments-count'),
         $ajaxImgs = document.querySelectorAll('.img-ajax'),
-        $postList = document.getElementById('post-list');
-
+        $postList = document.getElementById('post-list'),
+        $gitcomment = document.getElementById("gitcomment");
     //responsive design
     var isPC = true;
     (function (designPercent) {
@@ -409,6 +409,7 @@ window.onload = function () {
             }
         })();
     }
+
 
 
 };
