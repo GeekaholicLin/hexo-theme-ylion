@@ -25,7 +25,7 @@
 
 ## TODO | 计划
 
-- [x] [使用教程和开发Hexo主题教程](http://blog.geekaholic.cn/tags/Hexo%E4%B8%BB%E9%A2%98/)
+- [x] [使用教程和开发Hexo主题教程](http://blog.geekaholic.cn/tags/%E4%B8%BB%E9%A2%98%E5%88%B6%E4%BD%9C/)
 - [ ] 更多的优化
 - [ ] ~~文章分类目录可展开~~
 - [ ] Javascript模块化
