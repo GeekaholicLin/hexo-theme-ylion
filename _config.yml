@@ -163,6 +163,16 @@ leancloud:
 disqus_shortname:
 ### duoshuo
 duoshuo_shortname:
+### gitment
+gitment:
+  enable: true
+  owner: GeekaholicLin
+  repo: geekaholiclin.github.io
+  client_id: aa2215dfc8ee944d1205
+  client_secret: 77cd2afa5d161bc0ab04639ed81300d808c6e22b
+  labels: "blog,gitment"
+  perPage: 20
+  maxCommentHeight:
 
 ## analytics --统计功能
 baidu_anaylytics:
