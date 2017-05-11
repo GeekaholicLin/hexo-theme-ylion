@@ -56,7 +56,8 @@
     npm install hexo-generator-sitemap --save
     npm install hexo-deployer-git --save
     ## 若node_module目录下无以下文件夹，也要进行安装
-    npm install ejs --save
+	## 注意ejs的版本问题(见issue 5)
+    npm install ejs@^1.0.0 --save
     npm install moment --save
     npm install utils-merge --save
 ```
