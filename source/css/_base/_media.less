@@ -30,7 +30,7 @@ html{ font-size:777.08%;}
 
 /*edited by GeekaholicLin*/
 @media screen and (max-width: 479px){
-  #wrap #footer .social{display: inline-block;&>a{font-size: .45rem;}}
+  #wrap #footer .social{display: inline-block;&>a{font-size: .4rem;}}
 }
 @media screen and (max-width: 639px) {
   #main > .article-excerpt-wrap .article-img{display: none}
@@ -38,7 +38,6 @@ html{ font-size:777.08%;}
   #wrap #main > .article-excerpt-wrap .article-content{height: 1.5rem}
   #donate-wrap{overflow: auto!important;}
   #search-overlay #search-area{width: 90%;}
-  #main #post #post-footer .avatar{margin-right: 0}
   #wrap #post #post-body figure .gutter{display: none}
 }
 @media screen and (max-width: 819px){
@@ -79,7 +78,6 @@ html{ font-size:777.08%;}
       a:hover{background-color: #cecece}
     }
   }
-  #post-footer{text-align: center;.author-profile-section{text-align: left}}
   #wrap #footer{
     text-align: center;
     padding-bottom: 0.2rem;
@@ -88,11 +86,24 @@ html{ font-size:777.08%;}
   #footer .social{display: inline-block;}
 }
 @media screen and (max-width: 979px) {
-  #sidebar{display: none;}
+  #sidebar{display:none;}
+  #tools li.exchange-btn{display: block}
   #wrap #demo .demo-list-item{width: 100%;margin: 20px auto}
   #wrap #post #post-body iframe{width: 98%}
   #main{width: 100%}
   #page-pagination{width: 100%}
+  #container.exchange-sidebar{
+    #sidebar{
+      display: block;
+      width: 100%;
+    }
+    #main{
+      display: none;
+    }
+    #page-pagination{
+      display: none;
+    }
+  }
 }
 
 
