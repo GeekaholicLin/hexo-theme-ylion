@@ -63,11 +63,13 @@
 .gitment-header-like-btn svg {
   vertical-align: middle;
   height: 0.3rem;
+  width: 0.3rem;
 }
 
 .gitment-comment-like-btn svg {
   vertical-align: middle;
   height: 0.2rem;
+  width: 0.2rem;
 }
 
 .gitment-header-like-btn.liked svg,
