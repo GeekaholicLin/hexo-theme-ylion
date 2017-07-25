@@ -36,6 +36,7 @@ window.onload = function () {
     $exchangeBtn = document.querySelector("#tools .exchange-btn"),
     $prompt = document.querySelector("#error .prompt input"),
     $terminal = document.querySelector("#error .terminal"),
+    $terminalRun = document.querySelector("#error .terminal-run"),
     $urlPlaceHolders = document.querySelectorAll(".error-url"),
     $datePlaceHolders = document.querySelectorAll(".error-date"),
     $hostPlaceHolders = document.querySelectorAll(".error-host"),
@@ -96,6 +97,7 @@ window.onload = function () {
       $prompt.focus();
     }
   }
+
   function generateFormattedDate (now) {
     var year = now.getFullYear(),
       month = now.getMonth() + 1,
@@ -103,20 +105,24 @@ window.onload = function () {
       hour = now.getHours(),
       minute = now.getMinutes(),
       second = now.getSeconds(),
-      formattedDate = "--" + year + "-" + month + "-" + date + " " + (hour<10?"0":"")+hour +
-        ":" +(minute<10?"0":"")+minute + ":" + (second<10?"0":"")+second + "--";
+      formattedDate = "--" + year + "-" + month + "-" + date + " " +
+        (hour < 10 ? "0" : "") + hour +
+        ":" + (minute < 10 ? "0" : "") + minute + ":" +
+        (second < 10 ? "0" : "") + second + "--";
     return formattedDate;
   }
+
   (function () {
-    if($prompt){
+    if ($prompt) {
       $urlPlaceHolders[0].innerHTML = window.location.href;
       $urlPlaceHolders[1].innerHTML = window.location.href;
       $hostPlaceHolders[0].innerHTML = window.location.origin;
       $hostPlaceHolders[1].innerHTML = window.location.origin;
       var now = new Date();
       $datePlaceHolders[0].innerHTML = generateFormattedDate(now);
-      now.setSeconds(now.getSeconds()+Math.floor(Math.random()*20)+1);
+      now.setSeconds(now.getSeconds() + Math.floor(Math.random() * 20) + 1);
       $datePlaceHolders[1].innerHTML = generateFormattedDate(now);
+      $terminalRun.classList.add("show");
     }
   })();
   $terminal && $terminal.addEventListener("click", function () {
@@ -129,10 +135,8 @@ window.onload = function () {
       clickEvent.initEvent("click", false, true);
       inputEvent.initEvent("input", false, true);
       $searchBtn.dispatchEvent(clickEvent);
-      setTimeout(function () {
-        $searchInput.value = $prompt.value.trim();
-        document.getElementById("search-input").dispatchEvent(inputEvent);
-      }, 300);
+      $searchInput.value = $prompt.value.trim();
+      document.getElementById("search-input").dispatchEvent(inputEvent);
     }
   });
   //classList ployfill

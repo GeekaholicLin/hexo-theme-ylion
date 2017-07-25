@@ -22,6 +22,7 @@ var _ajax = {
             var $input = document.getElementById('search-input');
             var $resultContent = document.getElementById('search-result');
             $input.addEventListener('input', function () {
+                console.log('input');
                 var str = '';
                 var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
                 $resultContent.innerHTML = "";
@@ -103,6 +104,10 @@ var _ajax = {
                         $resultContent.innerHTML="";//remove the spinner
                         success($ajax.responseXML,extra);
                         extra.flag = true;
+                        /*优化404页面延迟*/
+                      var inputEvent = document.createEvent("HTMLEvents");
+                      inputEvent.initEvent("input", false, true);
+                      document.getElementById("search-input").dispatchEvent(inputEvent);
                     }
                 };
                 $ajax.open('GET', path, true);
