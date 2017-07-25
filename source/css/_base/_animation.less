@@ -162,6 +162,28 @@ to{
     opacity: 1;
   }
 });
+.keyframes(trainRun,{
+  from{
+    .translate(-100%,0);
+  }
+  to{
+    .translate(6rem,0)
+  }
+});
+.keyframes(ruinHeader,{
+  0%{
+    .transform(rotate(0deg) translate(-10%));
+  }
+  33.3%{
+    .transform(rotate(-7deg) translate(-10%));
+  }
+  66.6%{
+    .transform(rotate(-4deg) translate(-10%));
+  }
+  100%{
+    .transform(rotate(-5deg) translate(-10%));
+  }
+});
 .notification .fa-bell-o {
   .animation(bell .5s linear 0s infinite alternate);
 };

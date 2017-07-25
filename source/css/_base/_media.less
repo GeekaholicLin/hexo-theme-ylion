@@ -58,7 +58,7 @@ html{ font-size:777.08%;}
   #wrap #site-meta{
     float: none;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto!important;
     text-align: center;
     line-height: 1.4;
     #logo{
@@ -69,13 +69,17 @@ html{ font-size:777.08%;}
     }
   }
   #wrap #nav{
-    float: none;
+    float: none!important;
+    margin-left: 0!important;
     text-align: center;
     li{
       padding: 0;
       .fa{display: none;}
       a{background-color: #e0e0e0;.border-radius(2px);}
       a:hover{background-color: #cecece}
+      &:first-child{
+        margin-left: 0;
+      }
     }
   }
   #wrap #footer{

@@ -13,10 +13,17 @@ header {
   .textVerCenter(@headerHeight);
   color: @mainBlack;
   .clear-fix();
+  &.fixed{
+    #site-meta{
+      padding-top: 0;
+    }
+  }
   #site-meta {
     float: left;
     height: 100%;
     background-color: @pageBg;
+    padding-top: 3px;
+
     #logo {
       .inline-block();
       vertical-align: sub; /*fix*/

@@ -1,5 +1,5 @@
 <%- partial('_partial/head') %>
-<body>
+<body id="<%= "404 Not Found" === (page.title && page.title.trim()) ? 'error-page' : 'normal'%>">
 <%- partial('_partial/_head-sections/IE',null,{cache: !config.relative_link}) %>
 <div id="wrap">
     <%- partial('_partial/header') %>

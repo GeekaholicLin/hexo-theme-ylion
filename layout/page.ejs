@@ -40,3 +40,11 @@
         </div>
     </div>
 <%}%>
+
+<%if(page.type && page.type==='error'){%>
+<div id="main">
+    <div id="error">
+      <%- page.content%>
+    </div>
+</div>
+<%}%>

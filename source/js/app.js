@@ -33,7 +33,12 @@ window.onload = function () {
     $ajaxImgs = document.querySelectorAll(".img-ajax"),
     $postList = document.getElementById("post-list"),
     $postFooter = document.getElementById("post-footer"),
-    $exchangeBtn = document.querySelector('#tools .exchange-btn'),
+    $exchangeBtn = document.querySelector("#tools .exchange-btn"),
+    $prompt = document.querySelector("#error .prompt input"),
+    $terminal = document.querySelector("#error .terminal"),
+    $urlPlaceHolders = document.querySelectorAll(".error-url"),
+    $datePlaceHolders = document.querySelectorAll(".error-date"),
+    $hostPlaceHolders = document.querySelectorAll(".error-host"),
     $gitcomment = document.getElementById("gitcomment");
   //responsive design
   var isPC = true;
@@ -68,20 +73,68 @@ window.onload = function () {
   function fixPostFooterStyle () {
     if ($postFooter) {
       if (parseInt(window.getComputedStyle($postFooter).width, 10) <= 880) {
-        $postFooter.classList.add('short-footer');
+        $postFooter.classList.add("short-footer");
       } else {
-        $postFooter.classList.remove('short-footer');
+        $postFooter.classList.remove("short-footer");
       }
     }
 
   }
-  var clickTimes = 0;
-  $exchangeBtn && $exchangeBtn.addEventListener('click',function () {
-    if(clickTimes%2===0) $container.classList.add('exchange-sidebar');
-    else $container.classList.remove('exchange-sidebar');
-    clickTimes++;
-  },false);
 
+  var clickTimes = 0;
+  $exchangeBtn && $exchangeBtn.addEventListener("click", function () {
+    if (clickTimes % 2 === 0) {
+      $container.classList.add("exchange-sidebar");
+    } else {
+      $container.classList.remove("exchange-sidebar");
+    }
+    clickTimes++;
+  }, false);
+  autoFocus();
+  function autoFocus () {
+    if ($prompt) {
+      $prompt.focus();
+    }
+  }
+  function generateFormattedDate (now) {
+    var year = now.getFullYear(),
+      month = now.getMonth() + 1,
+      date = now.getDate() + 1,
+      hour = now.getHours(),
+      minute = now.getMinutes(),
+      second = now.getSeconds(),
+      formattedDate = "--" + year + "-" + month + "-" + date + " " + (hour<10?"0":"")+hour +
+        ":" +(minute<10?"0":"")+minute + ":" + (second<10?"0":"")+second + "--";
+    return formattedDate;
+  }
+  (function () {
+    if($prompt){
+      $urlPlaceHolders[0].innerHTML = window.location.href;
+      $urlPlaceHolders[1].innerHTML = window.location.href;
+      $hostPlaceHolders[0].innerHTML = window.location.origin;
+      $hostPlaceHolders[1].innerHTML = window.location.origin;
+      var now = new Date();
+      $datePlaceHolders[0].innerHTML = generateFormattedDate(now);
+      now.setSeconds(now.getSeconds()+Math.floor(Math.random()*20)+1);
+      $datePlaceHolders[1].innerHTML = generateFormattedDate(now);
+    }
+  })();
+  $terminal && $terminal.addEventListener("click", function () {
+    autoFocus();
+  });
+  $prompt && $prompt.addEventListener("keypress", function (event) {
+    if (event.keyCode === 13) {
+      var clickEvent = document.createEvent("HTMLEvents");
+      var inputEvent = document.createEvent("HTMLEvents");
+      clickEvent.initEvent("click", false, true);
+      inputEvent.initEvent("input", false, true);
+      $searchBtn.dispatchEvent(clickEvent);
+      setTimeout(function () {
+        $searchInput.value = $prompt.value.trim();
+        document.getElementById("search-input").dispatchEvent(inputEvent);
+      }, 300);
+    }
+  });
   //classList ployfill
   if (!("classList" in document.documentElement) && Object.defineProperty &&
     typeof HTMLElement !== "undefined") {
