@@ -134,13 +134,26 @@
       }
       .gutter {
         padding: 0 0.1rem;
-        color: @lineColor;
+        width: 0.15rem;
         border-right: 1px solid @btnBg;
+        & > pre{
+          display: none;
+        }
       }
       .code {
         padding: 0 .1rem;
         vertical-align: top;
+        counter-reset: line-number;
         .line {
+          position: relative;
+          &:before{
+            counter-increment: line-number;
+            content: counter(line-number);
+            color: @lineColor;
+            position: absolute;
+            left: -0.38rem;
+            top: 0;
+          }
           word-break: break-all;
           white-space: pre-wrap;
         }
