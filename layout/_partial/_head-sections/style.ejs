@@ -2,6 +2,7 @@
     var base = '/css/base';
     var needed = '';
     var comment = '';
+    var cssList = [];
     if (is_home()) {
         needed = '/css/pages/article-exp';
     } else if (is_post()) {
@@ -16,8 +17,13 @@
     }
     var _fontAwe = theme.fontAwesome || '/css/thirdParty/font-awesome.min.css';
     var _highlight = '/css/thirdParty/highlight/'+theme.highlightStyle;
+    if (is_post()) {
+        cssList = [base, needed, _fontAwe, _highlight,comment];
+    } else {
+        cssList = [base, needed, _fontAwe, _highlight];
+    }
 %>
-<%- css([base, needed, _fontAwe, _highlight,comment]) %>
+<%- css(cssList) %>
 <% if(!config.highlight.line_number){%>
 <style>
     figure .code .line:before{
