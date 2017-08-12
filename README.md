@@ -22,16 +22,18 @@
 - [x] 主题本身无图片
 - [x] 响应式
 - [x] gitment集成
+- [x] 支持双语对照功能
 - [x] （我编不下去了，等待你去发现~）
 
 ## TODO | 计划
 
 - [x] [使用教程和开发Hexo主题教程](http://blog.geekaholic.cn/tags/%E4%B8%BB%E9%A2%98%E5%88%B6%E4%BD%9C/)
-- [ ] 更多的优化
+- [ ] ~~更多的优化~~（说了和没说一样==）
 - [ ] ~~文章分类目录可展开~~
 - [ ] Javascript模块化
 - [ ] ~~多说的样式以拓展功能~~ (为多说默哀ing，已替换为[gitment](https://github.com/imsun/gitment))
 - [x] 数学公式支持 / updated: 2017/2/19，[说明&注意事项](http://blog.geekaholic.cn/2017/02/19/mathjax/)
+- [ ] 便捷翻译和双语对照功能的使用教程
 - [ ] 你们来决定...:monkey:
 
 
@@ -386,6 +388,10 @@ IE9+*、Chrome、Firefox、Safari
 - [Netcan_Space](http://www.netcan666.com/) / 参考置顶功能排序算法
 
 ## Changes log | 重要更新
+
+### V0.6.x
+
+- 增加便捷的翻译以及增加双语对照
 
 ### V0.5.x
 
