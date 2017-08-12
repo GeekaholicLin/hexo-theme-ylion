@@ -53,16 +53,8 @@
 进行功能的开发，依赖必不可少。
 
 ``` bash
-    npm install hexo-renderer-ejs --save
-    npm install hexo-renderer-less --save
-    npm install hexo-generator-feed --save
-    npm install hexo-generator-sitemap --save
-    npm install hexo-deployer-git --save
-    ## 若node_module目录下无以下文件夹，也要进行安装
-	## 注意ejs的版本问题(见issue 5)
-    npm install ejs@^1.0.0 --save
-    npm install moment --save
-    npm install utils-merge --save
+    ## 注意ejs的版本问题(见issue #5)
+    npm install hexo-renderer-ejs hexo-renderer-less hexo-generator-feed hexo-generator-sitemap hexo-deployer-git hexo-util ejs@^1.0.0 moment utils-merge --save
 ```
 
 ### Download | 下载主题文件
