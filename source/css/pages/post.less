@@ -119,6 +119,9 @@
         -webkit-box-shadow: 0.2rem 0 #FDBC40, 0.4rem 0 #35CD4B;
         box-shadow: 0.2rem 0 #FDBC40, 0.4rem 0 #35CD4B;
       }
+      table{
+        width: 100%;
+      }
       figcaption {
         position: absolute;
         width: 100%;
@@ -156,6 +159,9 @@
           }
           word-break: break-all;
           white-space: pre-wrap;
+        }
+        .line.marked {
+          background-color: @thirdBlue;
         }
       }
       .line {
@@ -217,6 +223,7 @@
       margin: .15rem auto;
       border: 1px solid @lineColor;
       max-width: 90%;
+      width: 60%!important;
       thead {
         background-color: #E3E3E3;
         font-weight: bold;
