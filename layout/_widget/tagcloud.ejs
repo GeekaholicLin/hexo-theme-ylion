@@ -2,16 +2,16 @@
 <li class="widget widget-normal tags">
   <h3 class="fa fa-tags widget-title"><%= __('tagcloud') %></h3>
   <div class="tagcloud-content">
-    <% var config = theme.tagcloud_config;%>
+    <% var tagcloud_config = theme.tagcloud_config;%>
       <%-tagcloud({
-          min_font: config.min_font,
-          max_font: config.max_font,
-          unit: config.unit,
-          amount: config.amount,
-          orderby: config.orderby,
-          color: config.color,
-          start_color: config.start_color,
-          end_color: config.end_color
+          min_font: tagcloud_config.min_font,
+          max_font: tagcloud_config.max_font,
+          unit: tagcloud_config.unit,
+          amount: tagcloud_config.amount,
+          orderby: tagcloud_config.orderby,
+          color: tagcloud_config.color,
+          start_color: tagcloud_config.start_color,
+          end_color: tagcloud_config.end_color
       }) %>
   </div>
 </li>
