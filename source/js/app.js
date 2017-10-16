@@ -40,7 +40,8 @@ window.onload = function () {
     $urlPlaceHolders = document.querySelectorAll(".error-url"),
     $datePlaceHolders = document.querySelectorAll(".error-date"),
     $hostPlaceHolders = document.querySelectorAll(".error-host"),
-    $gitcomment = document.getElementById("gitcomment");
+    $gitcomment = document.getElementById("gitcomment"),
+    _originalTableWidth = [];
   //responsive design
   var isPC = true;
   (function (designPercent) {
@@ -528,8 +529,8 @@ window.onload = function () {
        var item = tables[i];
        var tableWidth = window.getComputedStyle(item).width;
        var postBodyWidth = window.getComputedStyle($postBody).width;
-       console.log('tableWidth',tableWidth,postBodyWidth);
-       if(parseInt(tableWidth) > parseInt(postBodyWidth)){
+       _originalTableWidth[i] = _originalTableWidth[i] || tableWidth;
+       if(parseInt(_originalTableWidth[i]) > parseInt(postBodyWidth)){
          item.classList.add('scroll-table');
        }else{
          item.classList.remove('scroll-table');
