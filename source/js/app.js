@@ -68,6 +68,7 @@ window.onload = function () {
       fixPostFooterStyle();
       window.onresize = function () {
         fixPostFooterStyle();
+        handleLongTable();
       };
     }
   })(450 / 100);
@@ -519,5 +520,23 @@ window.onload = function () {
       }
     })();
   }
+  function handleLongTable(){
+   if($postBody){
+     var tables = document.querySelectorAll('#post-body > table');
+     var length = tables.length;
+     for(var i = 0;i< length;i++){
+       var item = tables[i];
+       var tableWidth = window.getComputedStyle(item).width;
+       var postBodyWidth = window.getComputedStyle($postBody).width;
+       console.log('tableWidth',tableWidth,postBodyWidth);
+       if(parseInt(tableWidth) > parseInt(postBodyWidth)){
+         item.classList.add('scroll-table');
+       }else{
+         item.classList.remove('scroll-table');
+       }
+     }
 
+   }
+  }
+  handleLongTable();
 };

@@ -224,10 +224,12 @@
     & > table {
       border-collapse: collapse;
       margin: .15rem auto;
-      border: 1px solid @lineColor;
-      width: 100%;
+      width: 100%!important;/* fix unknown render issue */
       overflow: auto;
-      display: block;
+      &.scroll-table{
+        border: 1px solid @lineColor;
+        display: block;
+      }
       thead {
         background-color: #E3E3E3;
         font-weight: bold;
@@ -248,6 +250,10 @@
     }
     acronym, abbr {
       color: @secondBlue;
+    }
+    & > iframe{
+      display: block;
+      margin: 0 auto;
     }
   }
   #post-footer {
