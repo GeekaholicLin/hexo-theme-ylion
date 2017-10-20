@@ -193,7 +193,7 @@ fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 ## script cdn --脚本cdn
 ## leancloud -- 官网:https://leancloud.cn/
-leancloud_src: http://cdn1.lncld.net/static/js/2.1.0/av-min.js
+leancloud_src: http://cdn1.lncld.net/static/js/3.2.1/av-min.js
 ## busuanzi -- 官网：http://busuanzi.ibruce.info/
 busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
 
