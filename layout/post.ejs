@@ -55,9 +55,9 @@
                         <a href="<%- page.translation %>"><%= page.translation %></a>
                     </li>
                 <%}%>
-                <li><%= __('date') %>: <span><%- full_date(page.date, 'YYYY-MM-DD  hh:mm:ss') %></span></li>
+                <li><%= __('date') %>: <span><%- full_date(page.date, 'YYYY-MM-DD  HH:mm:ss') %></span></li>
                 <% if(page.updated){ %>
-                <li><%= __('update') %>: <span><%- full_date(page.updated, 'YYYY-MM-DD  hh:mm:ss') %></span></li>
+                <li><%= __('update') %>: <span><%- full_date(page.updated, 'YYYY-MM-DD  HH:mm:ss') %></span></li>
                 <% } %>
                 <li class="post-category">
                     <%= __('post_categories') %>:
