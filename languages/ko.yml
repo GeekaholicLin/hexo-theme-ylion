@@ -1,0 +1,35 @@
+categories: 카테고리
+search: 검색
+tags: 태그
+tagcloud: 태그
+tweets: 트윗
+prev: 이전
+next: 다음
+comment: 댓글
+archive_a: Archives
+archive_b: "Archives: %s"
+page: 페이지 %d
+recent_posts: 최근 문서
+newer: newer
+older: older
+share: share
+powered_by: Powered by
+rss_feed: RSS
+rss: RSS
+category: 카테고리
+tag: 태그
+friend_links: 링크
+read_more: 읽기
+home: Home
+archives: Archives
+about: About
+search_placeholder: 검색
+author: 글쓴이
+translator: Henotia(https://github.com/henotia)
+original_post: 원본 문서
+date: 발행 일자
+update: 업데이트 일자
+post_categories: 카테고리
+post_tags: 태그
+post_licence: License
+popular_post: 인기있는 블로그 글

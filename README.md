@@ -6,7 +6,8 @@
 ![hexo-theme-ylion](http://olpvawdcl.bkt.clouddn.com/hexo-theme-ylion.jpg)
 
 
-
+## Translate
+Korean: [README Korean](./translate/korean/README_kr.md)
 
 ## Features | 特点
 

@@ -1,0 +1,218 @@
+# 한국어 사용자의 경우  _config.yml을 지우거나 확장자를 바꾼뒤
+# 본 파일인 _config_kr.yml을 _config.yml로 변경하여 사용하시거나
+# 파일 내의 주석을 참고해 _config.yml을 수정하세요
+
+# 본 파일은 README_kr.md에도 번역되어 있습니다
+
+# layout
+
+
+## menu --  탐색메뉴 표시{[@page:이름/*다국어지원*/,@url:주소,@icon:표시아이콘],
+menu:
+- page: home
+  url: /
+  icon: fa-home
+- page: rss
+  url: /atom.xml
+  icon: fa-rss
+
+## favicon -- 사이트 파비콘 위치{@favicon}
+favicon: /favicon.ico
+
+## rss -- rss파일 위치{@rss}
+rss: /atom.xml
+
+## widgets -- 사이트 왼측에 위치하는 위젯{@widgets:[notification,category,archive,popular,tagcloud,friends]}
+## 역자: popular의 경우 leancloud기능이 꺼져있으면 사용이 불가능 합니다
+widgets:
+- notification
+- category
+- archive
+- popular
+- tagcloud
+- friends
+
+## widgets settings
+### notification config -- 사이트 상단 공지에 대한 설정. HTML과 plain text 지원
+notification: |-
+
+            <p>ylion 테마 v0.0.0버전 출시 예정，기다려주세요~！
+            테마 제작자：<a href="https://github.com/GeekaholicLin"
+            title="fork me" target="_blank">Geekaholic</a></p>
+
+### categories-list config -- 카테고리 설정{@cate_config:{@show_count:숫자 표시여부，@show_current: 현재 카테고리 하이라이트 여부}}
+cate_config:
+ show_count: true
+ show_current: true
+
+### archives-list config
+### 아카이브 설정{@arch_config:/*참고 매개변수：https://hexo.io/ko/docs/helpers.html#list-archives*/}
+arch_config:
+ type: 'monthly'
+ show_count: true
+ order: -1
+
+### tagcloud config
+### 태그 목록 설정{@tagcloud_config:/*https://hexo.io/ko/docs/helpers.html#tagcloud*/}
+tagcloud_config:
+ min_font: 0.14
+ max_font: 0.2
+ unit: rem
+ amount: 100
+ color: true
+ orderby: 'count'
+ start_color: '#6699cc'
+ end_color: '#0A407C'
+
+### friends' links settings
+### 이웃 링크:{@links:[,,,]}
+links:
+- 테마 제작자: http://geekaholiclin.github.io
+
+
+
+# content
+
+## show top posts or not
+## 블로그 글 상단 고정 기능 사용여부
+## 사용할 경우 post의 front-matter에 `top`필드을 추가하세요. `top`가 클수록 상단에 위치합니다
+stick: true
+
+## social config
+## social 기능 설정 {@social:[url:주소,title:태그의 title,icon:표시 아이콘],[]}
+social:
+- url: https://www.example1.com
+  title: freecodecamp
+  icon: fa-free-code-camp
+- url: https://www.example2.com
+  title: Follow me~
+  icon: fa-github
+
+
+## custom content config
+## 커스텀 컨텐츠 설정
+### append copyright when copy the text
+### 저작권 보호 추가 {@appendCopyright:{enable:사용여부,triggerCopyLength:길이,appendText:추가 정보}}
+appendCopyright:
+  enable: true
+  triggerCopyLength: 200
+  appendText: '상업적인 사용은 저자에게 연락하여 권한을 얻어주시기 바랍니다. 비상업적 사용은 출처를 명확히 밝혀주시기 바랍니다 © example'
+
+### uncategory posts meta text
+### 디렉토리에 category가 추가되지 않으면 default로 'null'
+noCategoryText: 'null'
+
+### outdated browser warning
+### 낮은 버전의 브라우저 사용시 경고 메세지
+outdated_browser_text: '귀하의 브라우저 버전이 너무 낮습니다. 더 나은 사용환경을 경험하시려면 브라우저 버전을 업데이트 하시거나 IE Edge, Chrome, Firefox, Safari 등과 같은 최신 브라우저를 사용하십시오'
+
+### outdated post warning
+### 블로그 글 만료 기능 {@warning:{days:만료 일자,text:알림문자/*%d: 기간만료 일자 표시자*/}}
+warning:
+  days: 300 #default is 300 days
+  text: '해당 문서는 %d일 전에 작성되었습니다. 내용이 최신과 달라 의심스러운 경우 댓글로 남겨주세요'
+
+### index article excerpt
+### 블로그 글에 사용되는 디폴트 이미지
+### 규칙 : Front-matter 'img'에 있는 이미지 -> 해당 블로그 글의 임의 이미지 -> 디폴트 이미지 순으로 적용
+defaultImgs:
+  - http://XXXX.example.jpg
+  - /img/default-1.jpg
+excerptLength: 400
+
+### article meta
+### article meta는 첫 페이지에서 보여지는 블로그 글의 내부 페이지와 아이콘 정보입니다
+### @whichCategory 표시할 카테고리를 지정하십시오. 기본값은 마지막 카테고리 입니다. 만약 카테고리 갯수가 최대 길이를 초과한다면 마지막 한가지를 보여 줍니다
+whichCategory: 0
+
+### post footer
+### 저자 정보 부분 설정
+high_song: '신나게!! &#128541;'  ### 노래를 틀어주는 문자. 이 기능이 필요하지 않다면 비우거나 제거하세요
+author_img: http://example.com/author.jpg ### 저자 아바타 주소
+author_profile_page: /about.html  ### 저자의 이름을 클릭할 때 이동할 페이지
+donate:
+  text: '맥주한잔주기 &#128536;' ### 컨텐츠에 만족한 구독자가 donation을 해주는 기능을 나타내는 문자입니다. 필요하지 않다면 비우거나 제거하세요
+  img: ### donation 이미지주소
+  - url: http://example.com/alipay.jpg
+    alt: 'alipay로 사주기'
+  - url: http://example.com/wechat.png
+    alt: 'wechat으로 사주기'
+
+### support html&text like notification's support in this theme,
+### but please don't use <li> tag
+### 저작권 고지 텍스트, html / 텍스트 지원, <li> 태그 사용 불가
+cc: |-
+        <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+        크리에이티브 커먼즈 저작자표시-비영리-변경금지 3.0 비공식 라이센스（CC BY-NC-ND 3.0)
+        </a>
+
+### highlight
+### 내장된 두가지 코드테마 사용
+highlightStyle: github
+
+# third party service
+# 역자: busuanzi와 leancloud는 중국에서 사용하는 통계 사이트입니다.
+# 한국에서의 사용은 무리가 있을 수 있으므로 별도의 번역을 하지는 않겠습니다.
+## busuanzi --不蒜子站点总人数统计 {@visits_count:{enable:是否开启,icon:图标,text:显示文字/*%d为占位符*/,method:统计方式}}
+visits_count:
+  enable:  true
+  icon: fa-bar-chart
+  text: '환영합니다 %d번째 방문자님'
+  count_method: 'uv'
+  ### uv: 여러 게시글 확인도 하나의 count로 처리，pv: 게시글을 확인할 때 마다 방문자 수 증가
+
+## leancloud --- leancloud 阅读量统计
+## {@leancloud:{enable:是否开启,className:创建的class,app_id:,app_key:,region:默认为中国地区,limits:热门文章显示总数}}
+leancloud:
+  enable: false
+  className: "BlogCounter"
+  app_id:
+  app_key:
+  region:
+  limits: 10
+
+## comments -- 댓글
+### disqus
+disqus_shortname:
+### duoshuo
+duoshuo_shortname:
+### [gitment](https://github.com/imsun/gitment)
+gitment:
+  enable: false
+  owner: GeekaholicLin
+  repo: geekaholiclin.github.io
+  client_id: aa2215dfc8ee944d1205
+  client_secret: 77cd2afa5d161bc0ab04639ed81300d808c6e22b
+  labels: "blog,gitment"
+  perPage: 20
+  maxCommentHeight:
+
+## analytics
+baidu_anaylytics:
+google_anaylytics:
+
+## sitemap
+google_vertification:
+baidu_vertification:
+
+## mathjax
+mathjax:
+  enable: true  ### mathjax를 지원한다면 front-matter에서도 mathjax:true를 입력하세요
+  src: //cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML ### cdn
+
+# cdn or local files -- cdn을 통해 관련 라이브러리를 사용합니다. github에 내장된 파일을 사용하는 대신 cdn을 사용하는 것이 좋습니다.
+## style cdn
+## icon -- 공식 홈페이지 주소: http://fontawesome.io/icons/
+fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+
+
+## script cdn --脚本cdn
+## leancloud -- 官网:https://leancloud.cn/
+leancloud_src: http://cdn1.lncld.net/static/js/3.2.1/av-min.js
+## busuanzi -- 官网：http://busuanzi.ibruce.info/
+busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
+
+# theme and site self settings
+since: 2015 # 사이트 제작 시점
+robot: 'all' # 검색 엔진 크롤링 및 색인 생성 동작을 제어하려면 기본값은 all로 두세요. 'meta name = "robots"`또는 검색을 참조하십시오. https://support.google.com/webmasters/answer/79812?hl=ko
+version: 0.0.2 # 테마 버전
