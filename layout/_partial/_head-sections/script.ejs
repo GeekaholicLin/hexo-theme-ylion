@@ -24,8 +24,6 @@ var _busuanzi = theme.busuanzi_src || '/js/thirdParty/busuanzi.min.js';
 <% if(theme.gitment.enable && is_post()){ %>
 <%- js("/js/thirdParty/gitment.browser.min.js") %>
 <script>
-  var labels = "<%= theme.gitment.labels %>";
-  labels = labels.split(",");
   var gitment = new Gitment({
     id: window.location.pathname,
     owner: "<%= theme.gitment.owner %>",
@@ -34,8 +32,7 @@ var _busuanzi = theme.busuanzi_src || '/js/thirdParty/busuanzi.min.js';
       client_id: "<%= theme.gitment.client_id %>",
       client_secret: "<%= theme.gitment.client_secret %>"
     },
-    perPage: "<%= theme.gitment.perPage %>",
-    labels: labels
+    perPage: "<%= theme.gitment.perPage %>"
   });
 </script>
 <% } %>
