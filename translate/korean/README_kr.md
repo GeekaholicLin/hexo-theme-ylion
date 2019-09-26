@@ -3,7 +3,7 @@
 
 [미리보기](http://blog.geekaholic.cn)
 
-![hexo-theme-ylion](http://olpvawdcl.bkt.clouddn.com/hexo-theme-ylion.jpg)
+![hexo-theme-ylion](http://image.geekaholic.cn/hexo-theme-ylion.jpg)
 
 
 
@@ -274,7 +274,7 @@ mathjax:
   src: //cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML ### cdn
 
 # cdn or local files -- cdn을 통해 관련 라이브러리를 사용합니다. github에 내장된 파일을 사용하는 대신 cdn을 사용하는 것이 좋습니다.
-## style cdn 
+## style cdn
 ## icon -- 공식 홈페이지 주소: http://fontawesome.io/icons/
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
