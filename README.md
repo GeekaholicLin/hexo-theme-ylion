@@ -167,6 +167,6 @@ IE9+*、Chrome、Firefox、Safari
 - [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search) / 基于插件修改，解决站内搜索
 - [Netcan_Space](http://www.netcan666.com/) / 参考置顶功能排序算法
 
-[CHANGELOG](/CHANGELOG)
+[CHANGELOG](/CHANGELOG.md)
 
 [MIT](/LICENSE)
