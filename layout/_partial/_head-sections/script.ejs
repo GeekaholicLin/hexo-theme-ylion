@@ -9,33 +9,34 @@ var _busuanzi = theme.busuanzi_src || '/js/thirdParty/busuanzi.min.js';
   var appId = "<%- theme.leancloud.app_id %>";
   var appKey = "<%- theme.leancloud.app_key %>";
   var region = "<%= theme.leancloud.region %>";
+  var serverURLs = "<%= theme.leancloud.serverURLs %>";
   AV.init({
     appId: appId,
     appKey: appKey,
-    region: region
+    region: region,
+    serverURLs: serverURLs
   });
 </script>
 <% } %>
 <% if(theme.visits_count.enable){ %>
 <script async src="<%- url_for(_busuanzi) %>"></script>
 <% } %>
-<!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
 
-<% if(theme.gitment.enable && is_post()){ %>
-<%- js("/js/thirdParty/gitment.browser.min.js") %>
+<% if(theme.gitalk.enable && is_post()){ %>
+<script src="<%= theme.gitalk.js %>"></script>
+
 <script>
-  var labels = "<%= theme.gitment.labels %>";
-  labels = labels.split(",");
-  var gitment = new Gitment({
-    id: window.location.pathname,
-    owner: "<%= theme.gitment.owner %>",
-    repo: "<%= theme.gitment.repo %>",
-    oauth: {
-      client_id: "<%= theme.gitment.client_id %>",
-      client_secret: "<%= theme.gitment.client_secret %>"
-    },
-    perPage: "<%= theme.gitment.perPage %>",
-    labels: labels
-  });
+  var admin = "<%= theme.gitalk.admin %>";
+  admin = admin.split(",");
+  var gitalk = new Gitalk({
+    clientID: "<%= theme.gitalk.clientID %>",
+    clientSecret: "<%= theme.gitalk.clientSecret %>",
+    repo: "<%= theme.gitalk.repo %>",
+    owner: "<%= theme.gitalk.owner %>",
+    admin: admin,
+    id: decodeURIComponent(location.pathname),
+    distractionFreeMode: <%= theme.gitalk.distractionFreeMode %>
+  })
+
 </script>
 <% } %>

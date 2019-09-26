@@ -7,8 +7,8 @@
         needed = '/css/pages/article-exp';
     } else if (is_post()) {
         needed = '/css/pages/post';
-        if(theme.gitment.enable){
-          comment = "/css/pages/comments";
+        if(theme.gitalk.enable){
+          comment = theme.gitalk.css
         }
     } else if (is_archive() || is_tag() || is_category()) {
         needed = '/css/pages/archive';

@@ -149,7 +149,7 @@ visits_count:
   count_method: 'uv' ### uv 为多次点击算一次，pv为每篇文章算一次
 
 ## leancloud --- leancloud 阅读量统计
-## {@leancloud:{enable:是否开启,className:创建的class,app_id:,app_key:,region:默认为中国地区,limits:热门文章显示总数}}
+## {@leancloud:{enable:是否开启,className:创建的class,app_id:,app_key:,region:默认为中国地区,limits:热门文章显示总数,serverURLs:绑定的域名}}
 leancloud:
   enable: true
   className: "BlogCounter"
@@ -157,22 +157,25 @@ leancloud:
   app_key:
   region:
   limits: 10
+  serverURLs: http://xxxx.example
 
 ## comments -- 评论框
 ### disqus
 disqus_shortname:
 ### duoshuo
 duoshuo_shortname:
-### gitment
-gitment:
+### gitalk
+
+gitalk:
   enable: true
-  owner: GeekaholicLin
+  clientID: xxxxx
+  clientSecret: xxxxx
   repo: geekaholiclin.github.io
-  client_id: aa2215dfc8ee944d1205
-  client_secret: 77cd2afa5d161bc0ab04639ed81300d808c6e22b
-  labels: "blog,gitment"
-  perPage: 20
-  maxCommentHeight:
+  owner: GeekaholicLin
+  admin: GeekaholicLin
+  distractionFreeMode: false
+  css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+  js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
 
 ## analytics --统计功能
 baidu_anaylytics:
@@ -193,9 +196,9 @@ fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 ## script cdn --脚本cdn
 ## leancloud -- 官网:https://leancloud.cn/
-leancloud_src: http://cdn1.lncld.net/static/js/3.2.1/av-min.js
+leancloud_src: //cdn.jsdelivr.net/npm/leancloud-storage@3.15.0/dist/av-min.js
 ## busuanzi -- 官网：http://busuanzi.ibruce.info/
-busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
+busuanzi_src: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
 
 # theme and site self settings
 since: 2015
